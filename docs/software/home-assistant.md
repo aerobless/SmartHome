@@ -1,0 +1,16 @@
+[Home Assistant](https://home-assistant.io/) is the brains of the whole operation. It controls all my smart devices and it provides a bit of an integration layer to connect everything to Google Home and Apple Homekit.
+
+## Addons
+Home Assistant can be extended with addons. I'm currently using the following:
+
+| Name                                                                                                | Description                                                                                                                        | Repo             |
+|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| [AirCast](https://github.com/hassio-addons/addon-aircast)                                           | Creates virtual AirPlay devices for Chromecast devices                                                                             | Community Add-on |
+| [Duck DNS](https://github.com/home-assistant/hassio-addons/tree/master/duckdns)                     | Automatically update your Duck DNS IP address with integrated HTTPS support via Let's Encrypt.                                     | Official Add-on  |
+| [Glances](https://github.com/hassio-addons/addon-glances)                                           | Shows CPU, RAM etc. usage                                                                                                          | Community Add-on |
+| [MariaDB](https://github.com/home-assistant/hassio-addons/tree/master/mariadb)                      | An SQL database server. Used as a replacement for the default SQLite DB.                                                           | Official Add-on  |
+| [Mosquitto broker](https://github.com/home-assistant/hassio-addons/blob/master/mosquitto/README.md) | An Open Source MQTT broker. Used to connect to devices over MQTT.                                                                  | Official Add-on  |
+| [Node-RED](https://github.com/hassio-addons/addon-node-red)                                         | Flow-based programming for the Internet of Things. Used for all sorts of automations                                               | Community Add-on |
+| [Portainer](https://github.com/hassio-addons/addon-portainer)                                       | Portainer is an open-source lightweight management UI which allows you to easily manage a Docker host(s) or Docker swarm clusters. | Community Add-on |
+| [Visual Studio Code](https://github.com/hassio-addons/addon-vscode)                                 | This add-on runs Visual Studio Code, allowing you to edit your Home Assistant configuration directly from your web browser.        | Community Add-on |
+| [deCONZ](https://github.com/home-assistant/hassio-addons/tree/master/deconz)                        | Control a Zigbee network using ConBee or RaspBee hardware by Dresden Elektronik.                                                   | Official Add-on  |

@@ -1,0 +1,38 @@
+site_name: Smart Home
+site_author: Theo Winter
+site_url: https://aerobless.github.io/SmartHome/
+
+repo_name: aerobless/SmartHome
+repo_url: https://github.com/aerobless/SmartHome
+
+
+nav:
+  - Home: index.md
+  - Hardware: hardware/index.md
+  - Software:
+    - Overview: software/overview.md
+    - Home Assistant: software/home-assistant.md
+
+theme:
+  name: material
+  language: en
+
+extra:
+  disqus: aerobless-smart-home
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/aerobless
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/TheodorWinter
+
+google_analytics:
+  - UA-90728111-2
+  - auto
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
