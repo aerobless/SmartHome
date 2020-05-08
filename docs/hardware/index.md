@@ -17,11 +17,16 @@ Just a Raspberry Pi Zero running a headless raspbian image. I use it as a BLE to
 ### Xiaomi
 I have a lot of Xiaomi sensors. They're all paired to the Dresden Elektronik ConBee ZigBee stick
 
-- Xiaomi Flower Care Sensor
+| Name                     | Description                        | Sensors                                      | Communication |
+|--------------------------|------------------------------------|----------------------------------------------|---------------|
+| Aqara Shock Sensor       | Detects movement                   | Vibration, Temperature                       | ZigBee        |
+| Aqara Temperature Sensor | Reports temperature, humidity etc. | Temperature, Humidity, Atmospheric Pressure  | ZigBee        |
+| Xiaomi Flower Care       | Reports soil status.               | Water level, temperature, fertilizer         | BLE           |
+| Aqara Door Sensor        | Detects door open/closed           | open/close                                   | ZigBee        |
 
 ### Philips Hue
 
-### Netatmo
+#### Netatmo Weatherstation
 
 ## Power Switches
 
@@ -65,6 +70,7 @@ I use this hub only to connect to newer Philips Hue blubs that don't yet work wi
 ### WiFi & Ethernet
 
 #### FRITZ!Box 5490
+![FRITZ!Box 5490](fritzbox5490.jpg){: style="height:150px"}
 
 #### D-Link DGS-105
 
@@ -82,8 +88,13 @@ I use this hub only to connect to newer Philips Hue blubs that don't yet work wi
 
 #### Nello One
 
+## NFC
+
+### NFC Tags
+
 ## Other Smart Devices
 
 #### iRobot Roomba 980
-
 ![iRobot Roomba 980 Topdown](roomba_980.webp){: style="height:150px"}
+
+#### Oral-B Elektro Genius 10100S
