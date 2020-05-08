@@ -274,12 +274,18 @@
     Philips Hue
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Philips Hue">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#netatmo" class="md-nav__link">
-    Netatmo
+  <a href="#netatmo-weatherstation" class="md-nav__link">
+    Netatmo Weatherstation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -517,6 +523,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nfc" class="md-nav__link">
+    NFC
+  </a>
+  
+    <nav class="md-nav" aria-label="NFC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nfc-tags" class="md-nav__link">
+    NFC Tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#other-smart-devices" class="md-nav__link">
     Other Smart Devices
   </a>
@@ -527,6 +553,13 @@
           <li class="md-nav__item">
   <a href="#irobot-roomba-980" class="md-nav__link">
     iRobot Roomba 980
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oral-b-elektro-genius-10100s" class="md-nav__link">
+    Oral-B Elektro Genius 10100S
   </a>
   
 </li>
@@ -667,12 +700,18 @@
     Philips Hue
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Philips Hue">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#netatmo" class="md-nav__link">
-    Netatmo
+  <a href="#netatmo-weatherstation" class="md-nav__link">
+    Netatmo Weatherstation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -910,6 +949,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nfc" class="md-nav__link">
+    NFC
+  </a>
+  
+    <nav class="md-nav" aria-label="NFC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nfc-tags" class="md-nav__link">
+    NFC Tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#other-smart-devices" class="md-nav__link">
     Other Smart Devices
   </a>
@@ -920,6 +979,13 @@
           <li class="md-nav__item">
   <a href="#irobot-roomba-980" class="md-nav__link">
     iRobot Roomba 980
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oral-b-elektro-genius-10100s" class="md-nav__link">
+    Oral-B Elektro Genius 10100S
   </a>
   
 </li>
@@ -962,11 +1028,44 @@ As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home 
 <h2 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h2>
 <h3 id="xiaomi">Xiaomi<a class="headerlink" href="#xiaomi" title="Permanent link">&para;</a></h3>
 <p>I have a lot of Xiaomi sensors. They're all paired to the Dresden Elektronik ConBee ZigBee stick</p>
-<ul>
-<li>Xiaomi Flower Care Sensor</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Sensors</th>
+<th>Communication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aqara Shock Sensor</td>
+<td>Detects movement</td>
+<td>Vibration, Temperature</td>
+<td>ZigBee</td>
+</tr>
+<tr>
+<td>Aqara Temperature Sensor</td>
+<td>Reports temperature, humidity etc.</td>
+<td>Temperature, Humidity, Atmospheric Pressure</td>
+<td>ZigBee</td>
+</tr>
+<tr>
+<td>Xiaomi Flower Care</td>
+<td>Reports soil status.</td>
+<td>Water level, temperature, fertilizer</td>
+<td>BLE</td>
+</tr>
+<tr>
+<td>Aqara Door Sensor</td>
+<td>Detects door open/closed</td>
+<td>open/close</td>
+<td>ZigBee</td>
+</tr>
+</tbody>
+</table>
 <h3 id="philips-hue">Philips Hue<a class="headerlink" href="#philips-hue" title="Permanent link">&para;</a></h3>
-<h3 id="netatmo">Netatmo<a class="headerlink" href="#netatmo" title="Permanent link">&para;</a></h3>
+<h4 id="netatmo-weatherstation">Netatmo Weatherstation<a class="headerlink" href="#netatmo-weatherstation" title="Permanent link">&para;</a></h4>
 <h2 id="power-switches">Power Switches<a class="headerlink" href="#power-switches" title="Permanent link">&para;</a></h2>
 <h4 id="shelly">Shelly<a class="headerlink" href="#shelly" title="Permanent link">&para;</a></h4>
 <h4 id="mystrom">MyStrom<a class="headerlink" href="#mystrom" title="Permanent link">&para;</a></h4>
@@ -996,6 +1095,7 @@ As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home 
 <p>I use this hub only to connect to newer Philips Hue blubs that don't yet work with the ConBee ZigBee stick. I'd prefer to not use this hub because it is only connected to Home Assistant via Polling, this makes it slower then the ZigBee stick. It also doesn't support the Xiaomi ZigBee sensors and those sensors benefit from having powered devices nearby. So I try to have all ZigBee devices in the mesh connected to the Dresden Elektronik ConBee Stick.</p>
 <h3 id="wifi-ethernet">WiFi &amp; Ethernet<a class="headerlink" href="#wifi-ethernet" title="Permanent link">&para;</a></h3>
 <h4 id="fritzbox-5490">FRITZ!Box 5490<a class="headerlink" href="#fritzbox-5490" title="Permanent link">&para;</a></h4>
+<p><img alt="FRITZ!Box 5490" src="fritzbox5490.jpg" style="height:150px" /></p>
 <h4 id="d-link-dgs-105">D-Link DGS-105<a class="headerlink" href="#d-link-dgs-105" title="Permanent link">&para;</a></h4>
 <h2 id="tv-entertainment">TV &amp; Entertainment<a class="headerlink" href="#tv-entertainment" title="Permanent link">&para;</a></h2>
 <h4 id="samsung-qe65q7f">Samsung QE65Q7F<a class="headerlink" href="#samsung-qe65q7f" title="Permanent link">&para;</a></h4>
@@ -1004,9 +1104,12 @@ As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home 
 <h4 id="nvidia-shield-tv">Nvidia Shield TV<a class="headerlink" href="#nvidia-shield-tv" title="Permanent link">&para;</a></h4>
 <h2 id="locks">Locks<a class="headerlink" href="#locks" title="Permanent link">&para;</a></h2>
 <h4 id="nello-one">Nello One<a class="headerlink" href="#nello-one" title="Permanent link">&para;</a></h4>
+<h2 id="nfc">NFC<a class="headerlink" href="#nfc" title="Permanent link">&para;</a></h2>
+<h3 id="nfc-tags">NFC Tags<a class="headerlink" href="#nfc-tags" title="Permanent link">&para;</a></h3>
 <h2 id="other-smart-devices">Other Smart Devices<a class="headerlink" href="#other-smart-devices" title="Permanent link">&para;</a></h2>
 <h4 id="irobot-roomba-980">iRobot Roomba 980<a class="headerlink" href="#irobot-roomba-980" title="Permanent link">&para;</a></h4>
 <p><img alt="iRobot Roomba 980 Topdown" src="roomba_980.webp" style="height:150px" /></p>
+<h4 id="oral-b-elektro-genius-10100s">Oral-B Elektro Genius 10100S<a class="headerlink" href="#oral-b-elektro-genius-10100s" title="Permanent link">&para;</a></h4>
                 
               
               
