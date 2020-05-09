@@ -27,13 +27,27 @@ I have a lot of Xiaomi sensors. They're all paired to the Dresden Elektronik Con
 ### Philips Hue
 
 #### Netatmo Weatherstation
+One of the first devices I bought for my smart home. It consists of a indoor and outdoor weather station. Sadly the outdoor one has died after a few years.. but the indoor one is still going strong. Apart from the temperature it also reports the Carbon Dioxide levels which none of my other sensors do.
 
 ## Power Switches
 
-#### Shelly
+### Shelly
+Shelly's are tiny power switches that I've placed behind the actual light switches of my apartment. I mainly use them to detach the event of clicking a light-switch and turning the power of the light bulbs on/off. Since I use smart light blubs (Philips Hue), the light bulbs need to be powered on all the time, otherwise they can't be controlled via Home Assistant, Google Home etc. This is where the Shellys come in real handy. They conntect to Home Assistant via MQTT over WiFi and they can be configured in a way that pressing the actual light switch will simply send an MQTT event but not actually turn of the power of the light blubs. Home Assistant can then decide what to do with the button press event. In some cases I turn on/off the lights, but in other cases I've re-used the light switch to do other things. Such as change light scene or turn on the radio.
 
-#### MyStrom
+#### Shelly 1PM
+This shelly switches on power line / button. It also measure the power consumed.
+
+![Shelly 1PM](shelly_1pm.jpg){: style="height:150px"}
+
+#### Shelly 1PM
+This shelly switches two power lines / buttons. It also measures the power consumed. It could also be used to control electric blinds, but I don't use it for that.
+
+![Shelly 2.5](shelly_25.jpg){: style="height:150px"}
+
+### MyStrom Switch
 I have a bunch of MyStrom smart switches connected to all sorts of devices. I use them to control the connected devices, but also for automations. For example I use two of them to measure the power consumption of the washer & dryer. That data is then used to send a notification when the washer or dryer has finished and it's time to take out the clothes.
+
+![MyStrom Switch](myStrom-Switch.jpg){: style="height:200px"}
 
 ## Voice Assistants & Smart Display
 
@@ -57,7 +71,7 @@ I use mostly Philips Hue lightbulbs.
 ### Infrared
 
 #### Logitech Harmony Hub
-Used to control TV and external speakers.
+Used to control TV, external speakers and air conditioner.
 
 ### ZigBee
 
@@ -73,6 +87,9 @@ I use this hub only to connect to newer Philips Hue blubs that don't yet work wi
 ![FRITZ!Box 5490](fritzbox5490.jpg){: style="height:150px"}
 
 #### D-Link DGS-105
+
+#### Google Wifi
+![Google Wifi](google_wifi.jpg){: style="height:150px"}
 
 ## TV & Entertainment
 
@@ -92,9 +109,25 @@ I use this hub only to connect to newer Philips Hue blubs that don't yet work wi
 
 ### NFC Tags
 
+## Blinds
+
+#### KNX Controller
+
+#### KNX IP Bridge
+
 ## Other Smart Devices
 
+#### Kibernetik Air Conditioner
+A simple AC device. Communicates over IR.
+
+![Kibernetik Air Conditioner](kibernetik-klimageraet-mk-light-001.xxl3.jpg){: style="height:150px"}
+
 #### iRobot Roomba 980
+Smart vacuum robot that communicates over WiFi. It's actually running Linux and you can connect to it via SSH. Pretty dope, no? :D
+
 ![iRobot Roomba 980 Topdown](roomba_980.webp){: style="height:150px"}
 
 #### Oral-B Elektro Genius 10100S
+Smart toothbrush that communicates over BLE.
+
+![Oral-B Genius 10100S](oral_b_genius_10100S.jpg){: style="height:150px"}
