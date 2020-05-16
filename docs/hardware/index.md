@@ -26,6 +26,9 @@ I have a lot of Xiaomi sensors. They're all paired to the Dresden Elektronik Con
 
 ### Philips Hue
 
+### Withings Sleep
+
+
 #### Netatmo Weatherstation
 One of the first devices I bought for my smart home. It consists of a indoor and outdoor weather station. Sadly the outdoor one has died after a few years.. but the indoor one is still going strong. Apart from the temperature it also reports the Carbon Dioxide levels which none of my other sensors do.
 
