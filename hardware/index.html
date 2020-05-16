@@ -274,7 +274,14 @@
     Philips Hue
   </a>
   
-    <nav class="md-nav" aria-label="Philips Hue">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withings-sleep" class="md-nav__link">
+    Withings Sleep
+  </a>
+  
+    <nav class="md-nav" aria-label="Withings Sleep">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -761,7 +768,14 @@
     Philips Hue
   </a>
   
-    <nav class="md-nav" aria-label="Philips Hue">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withings-sleep" class="md-nav__link">
+    Withings Sleep
+  </a>
+  
+    <nav class="md-nav" aria-label="Withings Sleep">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1146,7 +1160,7 @@
 As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home Assistant.</p>
 <p><img alt="Intel NUC" src="intel-nuc.webp" style="height:150px" /></p>
 <h3 id="raspberry-pi-zero">Raspberry PI Zero<a class="headerlink" href="#raspberry-pi-zero" title="Permanent link">&para;</a></h3>
-<p>Just a Raspberry Pi Zero running a headless raspbian image. I use it as a BLE to MQTT gateway for the Xiaomi Flower Care sensors in my loggia. When triggered it will poll all the Flower Care sensors and forward their values over MQTT.</p>
+<p>Just a Raspberry Pi Zero running a headless Raspbian image. I use it as a BLE to MQTT gateway for the Xiaomi Flower Care sensors in my loggia. When triggered it will poll all the Flower Care sensors and forward their values over MQTT.</p>
 <h2 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h2>
 <h3 id="xiaomi">Xiaomi<a class="headerlink" href="#xiaomi" title="Permanent link">&para;</a></h3>
 <p>I have a lot of Xiaomi sensors. They're all paired to the Dresden Elektronik ConBee ZigBee stick</p>
@@ -1187,11 +1201,15 @@ As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home 
 </tbody>
 </table>
 <h3 id="philips-hue">Philips Hue<a class="headerlink" href="#philips-hue" title="Permanent link">&para;</a></h3>
+<h3 id="withings-sleep">Withings Sleep<a class="headerlink" href="#withings-sleep" title="Permanent link">&para;</a></h3>
+<p>It's main purpose is to record my sleep patterns and store them in Apple Health. However as an added benefit I can use it detect when the bed is occupied and e.g. automatically turn off lights.</p>
+<p><img alt="Withings Sleep" src="withings_sleep.png" style="height:150px" /></p>
 <h4 id="netatmo-weatherstation">Netatmo Weatherstation<a class="headerlink" href="#netatmo-weatherstation" title="Permanent link">&para;</a></h4>
 <p>One of the first devices I bought for my smart home. It consists of a indoor and outdoor weather station. Sadly the outdoor one has died after a few years.. but the indoor one is still going strong. Apart from the temperature it also reports the Carbon Dioxide levels which none of my other sensors do.</p>
+<p><img alt="Netatmo Weatherstation" src="netatmo_weatherstation.webp" style="height:150px" /></p>
 <h2 id="power-switches">Power Switches<a class="headerlink" href="#power-switches" title="Permanent link">&para;</a></h2>
 <h3 id="shelly">Shelly<a class="headerlink" href="#shelly" title="Permanent link">&para;</a></h3>
-<p>Shelly's are tiny power switches that I've placed behind the actual light switches of my apartment. I mainly use them to detach the event of clicking a light-switch and turning the power of the light bulbs on/off. Since I use smart light blubs (Philips Hue), the light bulbs need to be powered on all the time, otherwise they can't be controlled via Home Assistant, Google Home etc. This is where the Shellys come in real handy. They conntect to Home Assistant via MQTT over WiFi and they can be configured in a way that pressing the actual light switch will simply send an MQTT event but not actually turn of the power of the light blubs. Home Assistant can then decide what to do with the button press event. In some cases I turn on/off the lights, but in other cases I've re-used the light switch to do other things. Such as change light scene or turn on the radio.</p>
+<p>Shelly's are tiny power switches that I've placed behind the actual light switches of my apartment. I mainly use them to detach the event of clicking a light-switch and turning the power of the light bulbs on/off. Since I use smart light bulbs (Philips Hue), the light bulbs need to be powered on all the time, otherwise they can't be controlled via Home Assistant, Google Home etc. This is where the Shellys come in real handy. They connect to Home Assistant via MQTT over WiFi and they can be configured in a way that pressing the actual light switch will simply send an MQTT event but not actually turn of the power of the light bulbs. Home Assistant can then decide what to do with the button press event. In some cases I turn on/off the lights, but in other cases I've re-used the light switch to do other things. Such as change light scene or turn on the radio.</p>
 <h4 id="shelly-1pm">Shelly 1PM<a class="headerlink" href="#shelly-1pm" title="Permanent link">&para;</a></h4>
 <p>This shelly switches on power line / button. It also measure the power consumed.</p>
 <p><img alt="Shelly 1PM" src="shelly_1pm.jpg" style="height:150px" /></p>
@@ -1203,11 +1221,44 @@ As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home 
 <p><img alt="MyStrom Switch" src="myStrom-Switch.jpg" style="height:200px" /></p>
 <h2 id="voice-assistants-smart-display">Voice Assistants &amp; Smart Display<a class="headerlink" href="#voice-assistants-smart-display" title="Permanent link">&para;</a></h2>
 <h3 id="google-home">Google Home<a class="headerlink" href="#google-home" title="Permanent link">&para;</a></h3>
+<p>I use Google Home to have voice controls for all my devices and as a digital assistant. Devices relevant for voice controls are exposed to Google Assistant via the Nabu Casa integration.
+In my apartment I've deployed 5 Google Home devices to reach 100% coverage of voice recognition in all rooms. In addition to voice control they also serve as smart speakers for playing music or notifications.</p>
+<p>Some of the commands I use most often:</p>
+<p>Okay Google ...</p>
 <ul>
-<li>Google Home Mini 3x</li>
-<li>Google Home</li>
-<li>Google Nest Hub</li>
+<li>[<strong>open</strong>/close] the blinds</li>
+<li>turn [<strong>all</strong>/the bedroom/the living room] lights [<strong>on</strong>/off]</li>
+<li>play [<strong>music</strong>/radio] [<strong>...</strong>/on everywhere]</li>
+<li>add [item] to the shopping list</li>
+<li>what's the temperature [<strong>inside</strong>/outside]?</li>
+<li>turn off the tv</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Description</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Home</td>
+<td>The original Google Home. Has pretty good sound quality from multiple speakers. I have one placed near the computer desk and I use it to listen to music.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Google Home Mini</td>
+<td>This a small version of a Google Home, it has only one speaker.  I have one in the bathroom, bedroom and loggia. They're decent enough to listen to music ocasionally.</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Google Nest Hub</td>
+<td>This one is also a smart display. It can show receipts, timers, maps, youtube videos and more. I have one in the kitchen, it's ideal for cooking. Also nice to see the weather forecast for the whole week. It has a touch screen but I operate it only by voice 95% of the time.</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 <h2 id="lights">Lights<a class="headerlink" href="#lights" title="Permanent link">&para;</a></h2>
 <h3 id="philips-hue_1">Philips Hue<a class="headerlink" href="#philips-hue_1" title="Permanent link">&para;</a></h3>
 <p>I use mostly Philips Hue lightbulbs.</p>
@@ -1215,28 +1266,44 @@ As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home 
 <li>Philips Filament</li>
 </ul>
 <h4 id="nanoleaf-aurora">Nanoleaf Aurora<a class="headerlink" href="#nanoleaf-aurora" title="Permanent link">&para;</a></h4>
+<p>A smart light consisting of triangle shaped LED panels. The panels can be arranged in any pattern desired. It can also be animated with or without music. The Nanoleaf connects to Home Assistant over WiFi.</p>
+<p><img alt="Nanoleaf Aurora" src="nanoleaf_aurora.webp" style="height:150px" /></p>
 <h2 id="wireless-network-hubs">Wireless Network Hubs<a class="headerlink" href="#wireless-network-hubs" title="Permanent link">&para;</a></h2>
 <h3 id="infrared">Infrared<a class="headerlink" href="#infrared" title="Permanent link">&para;</a></h3>
 <h4 id="logitech-harmony-hub">Logitech Harmony Hub<a class="headerlink" href="#logitech-harmony-hub" title="Permanent link">&para;</a></h4>
 <p>Used to control TV, external speakers and air conditioner.</p>
+<p><img alt="Logitech Harmony Hub" src="logitech_harmony_hub.jpg" style="height:50px" /></p>
 <h3 id="zigbee">ZigBee<a class="headerlink" href="#zigbee" title="Permanent link">&para;</a></h3>
 <h4 id="dresden-elektronik-conbee-stick">Dresden Elektronik ConBee Stick<a class="headerlink" href="#dresden-elektronik-conbee-stick" title="Permanent link">&para;</a></h4>
-<p>I use a Dreden Elektronik ConBee stick as ZigBee gateway for most of my ZigBee devices. I'd like to use it exclusively, however I've been having some trouble with the new Bluetooth-enabled Philips Hue blubs. So those few new gen Philips Hue blubs are connected to a normal Hue Hub. The ConBee stick is plugged directly into the Intel Nuc running Home Assistant.</p>
+<p>I use a Dresden Elektronik ConBee stick as ZigBee gateway for most of my ZigBee devices. I'd like to use it exclusively, however I've been having some trouble with the new Bluetooth-enabled Philips Hue bulbs. So those few new gen Philips Hue bulbs are connected to a normal Hue Hub. The ConBee stick is plugged directly into the Intel Nuc running Home Assistant.</p>
+<p><img alt="ConBee" src="conbee.jpg" style="height:50px" /></p>
 <h4 id="philips-hue-hub-v2">Philips Hue Hub v2<a class="headerlink" href="#philips-hue-hub-v2" title="Permanent link">&para;</a></h4>
-<p>I use this hub only to connect to newer Philips Hue blubs that don't yet work with the ConBee ZigBee stick. I'd prefer to not use this hub because it is only connected to Home Assistant via Polling, this makes it slower then the ZigBee stick. It also doesn't support the Xiaomi ZigBee sensors and those sensors benefit from having powered devices nearby. So I try to have all ZigBee devices in the mesh connected to the Dresden Elektronik ConBee Stick.</p>
+<p>I use this hub only to connect to newer Philips Hue bulbs that don't yet work with the ConBee ZigBee stick. I'd prefer to not use this hub because it is only connected to Home Assistant via Polling, this makes it slower then the ZigBee stick. It also doesn't support the Xiaomi ZigBee sensors and those sensors benefit from having powered devices nearby. So I try to have all ZigBee devices in the mesh connected to the Dresden Elektronik ConBee Stick.</p>
 <h3 id="wifi-ethernet">WiFi &amp; Ethernet<a class="headerlink" href="#wifi-ethernet" title="Permanent link">&para;</a></h3>
 <h4 id="fritzbox-5490">FRITZ!Box 5490<a class="headerlink" href="#fritzbox-5490" title="Permanent link">&para;</a></h4>
+<p>The router recommended by my internet provider (Init 7). This is the fiber version. It works very well and I'm quite happy. It's easy to set static IPs in the local network and port forwarding works well. I don't use the WiFi feature.</p>
 <p><img alt="FRITZ!Box 5490" src="fritzbox5490.jpg" style="height:150px" /></p>
 <h4 id="d-link-dgs-105">D-Link DGS-105<a class="headerlink" href="#d-link-dgs-105" title="Permanent link">&para;</a></h4>
 <h4 id="google-wifi">Google Wifi<a class="headerlink" href="#google-wifi" title="Permanent link">&para;</a></h4>
+<p>I use this only because it's made by Google and looks quite nice.</p>
 <p><img alt="Google Wifi" src="google_wifi.jpg" style="height:150px" /></p>
 <h2 id="tv-entertainment">TV &amp; Entertainment<a class="headerlink" href="#tv-entertainment" title="Permanent link">&para;</a></h2>
 <h4 id="samsung-qe65q7f">Samsung QE65Q7F<a class="headerlink" href="#samsung-qe65q7f" title="Permanent link">&para;</a></h4>
+<p>A smart tv. It connects to the internet over Ethernet or WiFi. It has some Web APIs but they're quite restricted and not fully finished.. e.g. you can switch between tv mode and the first hdmi source but not others.. so I've ended up automating it over IR commands sent via a Logitech Harmony Hub. Other then the bad API it's a good tv. It has apps for all the major streaming providers and it can also play 4k video from a computer or network share.</p>
+<p><img alt="Samsung QE65Q7F" src="samsung_qe65q7f.jpg" style="height:150px" /></p>
 <h4 id="sony-ps4-pro">Sony PS4 Pro<a class="headerlink" href="#sony-ps4-pro" title="Permanent link">&para;</a></h4>
+<p>A game console. It can be controlled by Home Assistant via ethernet/WiFi.</p>
+<p><img alt="PlayStation 4 Pro" src="ps4_pro.webp" style="height:150px" /></p>
 <h4 id="apple-tv-4k-32gb">Apple TV 4K 32GB<a class="headerlink" href="#apple-tv-4k-32gb" title="Permanent link">&para;</a></h4>
+<p>I originally bought this as a way to expose Apple Homekit for remote access. However I've since stopped using Homekit almost entirely. It still sees occasional use a airplay display. </p>
+<p><img alt="Apple TV 4k" src="apple_tv_4k.webp" style="height:100px" /></p>
 <h4 id="nvidia-shield-tv">Nvidia Shield TV<a class="headerlink" href="#nvidia-shield-tv" title="Permanent link">&para;</a></h4>
+<p>I originally bought this because I thought Android TV was cool. I rarely use it. It serves as a Chromecast occasionally.. but that's really all there is to it.</p>
+<p><img alt="Nvidia Shield" src="nvidia_shield_tv.png" style="height:100px" /></p>
 <h2 id="locks">Locks<a class="headerlink" href="#locks" title="Permanent link">&para;</a></h2>
 <h4 id="nello-one">Nello One<a class="headerlink" href="#nello-one" title="Permanent link">&para;</a></h4>
+<p>The Nello One is a interesting device. It's installed as a middle man between the buildings intercom/door opener system. It allows me to open the apartment buildings main door from my phone instead of with a key. The way it does this is by emulating a button press (door open) on the intercom device.</p>
+<p><img alt="Nello One" src="nello_one.webp" style="height:100px" /></p>
 <h2 id="nfc">NFC<a class="headerlink" href="#nfc" title="Permanent link">&para;</a></h2>
 <h3 id="nfc-tags">NFC Tags<a class="headerlink" href="#nfc-tags" title="Permanent link">&para;</a></h3>
 <h2 id="blinds">Blinds<a class="headerlink" href="#blinds" title="Permanent link">&para;</a></h2>
