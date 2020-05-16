@@ -7,7 +7,7 @@ A list of the hardware currently present in my smart home.
 The brains of my whole Smart Home setup. It's sporting a Intel i3-7100U CPU clocking 2.4 GHz, 2x 8GB DDR-4 Ram and an Intel 545 256GB SSD.
 As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home Assistant.
 
-![Intel NUC](intel-nuc.webp){: style="height:150px"}
+![Intel NUC](intel-nuc.jpg){: style="height:150px"}
 
 ### Raspberry PI Zero
 Just a Raspberry Pi Zero running a headless Raspbian image. I use it as a BLE to MQTT gateway for the Xiaomi Flower Care sensors in my loggia. When triggered it will poll all the Flower Care sensors and forward their values over MQTT.
@@ -34,7 +34,7 @@ It's main purpose is to record my sleep patterns and store them in Apple Health.
 #### Netatmo Weatherstation
 One of the first devices I bought for my smart home. It consists of a indoor and outdoor weather station. Sadly the outdoor one has died after a few years.. but the indoor one is still going strong. Apart from the temperature it also reports the Carbon Dioxide levels which none of my other sensors do.
 
-![Netatmo Weatherstation](netatmo_weatherstation.webp){: style="height:150px"}
+![Netatmo Weatherstation](netatmo_weatherstation.jpg){: style="height:150px"}
 
 ## Power Switches
 
@@ -90,7 +90,7 @@ I use mostly Philips Hue lightbulbs.
 #### Nanoleaf Aurora
 A smart light consisting of triangle shaped LED panels. The panels can be arranged in any pattern desired. It can also be animated with or without music. The Nanoleaf connects to Home Assistant over WiFi.
 
-![Nanoleaf Aurora](nanoleaf_aurora.webp){: style="height:150px"}
+![Nanoleaf Aurora](nanoleaf_aurora.jpg){: style="height:150px"}
 
 ## Wireless Network Hubs
 
@@ -135,12 +135,12 @@ A smart tv. It connects to the internet over Ethernet or WiFi. It has some Web A
 #### Sony PS4 Pro
 A game console. It can be controlled by Home Assistant via ethernet/WiFi.
 
-![PlayStation 4 Pro](ps4_pro.webp){: style="height:150px"}
+![PlayStation 4 Pro](ps4_pro.jpg){: style="height:150px"}
 
 #### Apple TV 4K 32GB
 I originally bought this as a way to expose Apple Homekit for remote access. However I've since stopped using Homekit almost entirely. It still sees occasional use a airplay display. 
 
-![Apple TV 4k](apple_tv_4k.webp){: style="height:100px"}
+![Apple TV 4k](apple_tv_4k.jpg){: style="height:100px"}
 
 #### Nvidia Shield TV
 I originally bought this because I thought Android TV was cool. I rarely use it. It serves as a Chromecast occasionally.. but that's really all there is to it.
@@ -152,7 +152,7 @@ I originally bought this because I thought Android TV was cool. I rarely use it.
 #### Nello One
 The Nello One is a interesting device. It's installed as a middle man between the buildings intercom/door opener system. It allows me to open the apartment buildings main door from my phone instead of with a key. The way it does this is by emulating a button press (door open) on the intercom device.
 
-![Nello One](nello_one.webp){: style="height:100px"}
+![Nello One](nello_one.jpg){: style="height:100px"}
 
 ## NFC
 
@@ -180,7 +180,7 @@ A simple AC device. Communicates over IR.
 #### iRobot Roomba 980
 Smart vacuum robot that communicates over WiFi. It's actually running Linux and you can connect to it via SSH. Pretty dope, no? :D
 
-![iRobot Roomba 980 Topdown](roomba_980.webp){: style="height:150px"}
+![iRobot Roomba 980 Topdown](roomba_980.jpg){: style="height:150px"}
 
 #### Oral-B Elektro Genius 10100S
 Smart toothbrush that communicates over BLE.
