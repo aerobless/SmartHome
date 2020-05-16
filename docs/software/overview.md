@@ -16,5 +16,14 @@ Visual Studio Code is an awesome IDE in it's own right. However I also run it as
 
 ## Documentation
 
-### MkDocs
+### [MkDocs](https://www.mkdocs.org/)
 This page is made with [MkDocs](https://www.mkdocs.org/). It's a static site generator that's geared towards building project documentation. The source files are written in Markdown and configured with a single .yaml configuration file. I host my smart home documentation on Github pages.
+
+## SaaS
+Software as a service.. or cloud stuff that I use :)
+
+### [Exist](https://exist.io/?referred_by=aerobless)
+Exist combines the data of various sources (Apple Health, RescueTime, Weather .. etc.) to help you understand what makes you more happy, productive, active etc. This data is already being collected by other entities.. so it's interesting to have it for yourself and draw your own conclusions. I've made some automations in home assistant to automatically log the time spent gaming or watching tv to Exist.io.
+
+### [1Password](https://1password.com/)
+The password manager of my choice. Apart from storing passwords it has a few features that I really like. It has a scanner that detects weak, vulnerable or duplicate passwords and allows you to easily change them. And it can store 2FA pins in addition to passwords. This is a lot better than with Google Authenticator where you'd need to reset all your 2FA pins every time you set up a new phone.
