@@ -585,15 +585,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#knx-controller" class="md-nav__link">
-    KNX Controller
+  <a href="#knx-controller-9x-aktor-mgx-9" class="md-nav__link">
+    KNX Controller 9x Aktor MGX-9
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#knx-ip-bridge" class="md-nav__link">
-    KNX IP Bridge
+  <a href="#knx-ip-interface-731" class="md-nav__link">
+    KNX IP Interface 731
   </a>
   
 </li>
@@ -1079,15 +1079,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#knx-controller" class="md-nav__link">
-    KNX Controller
+  <a href="#knx-controller-9x-aktor-mgx-9" class="md-nav__link">
+    KNX Controller 9x Aktor MGX-9
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#knx-ip-bridge" class="md-nav__link">
-    KNX IP Bridge
+  <a href="#knx-ip-interface-731" class="md-nav__link">
+    KNX IP Interface 731
   </a>
   
 </li>
@@ -1307,8 +1307,12 @@ In my apartment I've deployed 5 Google Home devices to reach 100% coverage of vo
 <h2 id="nfc">NFC<a class="headerlink" href="#nfc" title="Permanent link">&para;</a></h2>
 <h3 id="nfc-tags">NFC Tags<a class="headerlink" href="#nfc-tags" title="Permanent link">&para;</a></h3>
 <h2 id="blinds">Blinds<a class="headerlink" href="#blinds" title="Permanent link">&para;</a></h2>
-<h4 id="knx-controller">KNX Controller<a class="headerlink" href="#knx-controller" title="Permanent link">&para;</a></h4>
-<h4 id="knx-ip-bridge">KNX IP Bridge<a class="headerlink" href="#knx-ip-bridge" title="Permanent link">&para;</a></h4>
+<h4 id="knx-controller-9x-aktor-mgx-9">KNX Controller 9x Aktor MGX-9<a class="headerlink" href="#knx-controller-9x-aktor-mgx-9" title="Permanent link">&para;</a></h4>
+<p>The KNX blinds controller is pre-installed in the apartment. One thing I learned about KNX is that you can't download an existing configuration of a controller. You can just overwrite it. This has led to some issues where the building couldn't control the blinds anymore once I wrote my own configuration onto the controller. Luckily I was able to get the source files for the original configuration from a technician and add my own KNX addresses to it. So now the building can still lock my blinds for maintenance or high winds but I can also control them via Home Assistant. KNX devices are configured with <a href="https://www.knx.org/knx-en/for-professionals/software/ets-5-professional/index.php">ETS</a> which is available for free for personal use (up to 5 devices).</p>
+<p><img alt="MGX-9" src="MGX-9.jpg" style="height:150px" /></p>
+<h4 id="knx-ip-interface-731">KNX IP Interface 731<a class="headerlink" href="#knx-ip-interface-731" title="Permanent link">&para;</a></h4>
+<p>This device is a interface between the KNX TP (twisted pair) and ethernet. It allows Home Assistant to communicate with the KNX controller controlling the blinds in my apartment. It fits in a DIN-bracket and draws power directly from the KNX bus.</p>
+<p><img alt="KNX IP Interface 731" src="knx-ip-interface.png" style="height:150px" /></p>
 <h2 id="other-smart-devices">Other Smart Devices<a class="headerlink" href="#other-smart-devices" title="Permanent link">&para;</a></h2>
 <h4 id="kibernetik-air-conditioner">Kibernetik Air Conditioner<a class="headerlink" href="#kibernetik-air-conditioner" title="Permanent link">&para;</a></h4>
 <p>A simple AC device. Communicates over IR.</p>
