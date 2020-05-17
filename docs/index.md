@@ -1,6 +1,11 @@
 # Home
 
-Here are all my configurations used in my Smart Home. At the center of all is [Home Assistant](https://home-assistant.io/) that controls all hardware in my home.
+I've set up this page to document my Smart Home adventure and to easily share my automations & configuration with others. This documentation is
+still very much a work in progress so it might be a bit rough around the edges.
 
-# Overview
++ [Screenshots of the UI](/software/home-assistant/)
++ [Automations](/automations/)
++ [Hardware](/hardware/)
+
+## Technology Overview
 [![Smart Home Overview](smart-home-overview.jpg)](https://www.draw.io/#Uhttps://aerobless.github.io/SmartHome/smart-home.drawio)

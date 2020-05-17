@@ -12,10 +12,12 @@ nav:
   - Software:
     - Overview: software/overview.md
     - Home Assistant: software/home-assistant.md
+  - Automations: automations/index.md
 
 theme:
   name: material
   language: en
+  logo: './logo.svg'
 
 extra:
   disqus: aerobless-smart-home
