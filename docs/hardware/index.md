@@ -138,7 +138,7 @@ A game console. It can be controlled by Home Assistant via ethernet/WiFi.
 ![PlayStation 4 Pro](ps4_pro.jpg){: style="height:150px"}
 
 #### Apple TV 4K 32GB
-I originally bought this as a way to expose Apple Homekit for remote access. However I've since stopped using Homekit almost entirely. It still sees occasional use a airplay display. 
+I originally bought this as a way to expose Apple Homekit for remote access. However I've since stopped using Homekit almost entirely. It still sees occasional use an airplay display. 
 
 ![Apple TV 4k](apple_tv_4k.jpg){: style="height:100px"}
 
