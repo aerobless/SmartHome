@@ -15,5 +15,9 @@
      <loc>https://aerobless.github.io/SmartHome/software/home-assistant/</loc>
      <lastmod>2020-05-17</lastmod>
      <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://aerobless.github.io/SmartHome/automations/</loc>
+     <lastmod>2020-05-17</lastmod>
+     <changefreq>daily</changefreq>
     </url>
 </urlset>
