@@ -4,8 +4,8 @@ it's hard to draw a clear line.
 ## Home Automation
 
 ### Home Assistant
-[Home Assistant](/software/home-assistant/) is the core of my smart home setup. It's an open source home automation software written in Python that runs locally on a computer as small as a Raspberry Pi or as powerful as the user desires. At the time of me writing this it supports over 1500 integrations with various smart home devices & services. It is actively developed and has a regular release cycle of 3 weeks. Updates are frequent and of good quality.  
-I'm running my [Home Assistant](/software/home-assistant/) instance on a Intel NUC in supervised mode. This means I provide my own OS of choice (Ubuntu) and Home Assistant runs a supervisor software on top that manages the docker containers used by itself and addons.
+[Home Assistant](/SmartHome/software/home-assistant/) is the core of my smart home setup. It's an open source home automation software written in Python that runs locally on a computer as small as a Raspberry Pi or as powerful as the user desires. At the time of me writing this it supports over 1500 integrations with various smart home devices & services. It is actively developed and has a regular release cycle of 3 weeks. Updates are frequent and of good quality.  
+I'm running my [Home Assistant](/SmartHome/software/home-assistant/) instance on a Intel NUC in supervised mode. This means I provide my own OS of choice (Ubuntu) and Home Assistant runs a supervisor software on top that manages the docker containers used by itself and addons.
 
 ### Node-RED
 Node-RED is a programming tool for wiring together hardware devices, APIs and online services. It provides a web-editor that makes it easy to wire together flows using a wide range of nodes. Changes can be deployed with a single-click. Node-RED was originally developed by IBM but has since been contributed to the open source JS Foundation project.
