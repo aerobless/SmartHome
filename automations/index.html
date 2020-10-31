@@ -15,7 +15,7 @@
         <meta name="author" content="Theo Winter">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.df84b5fe.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.5d00201e.min.css">
       
       
     
@@ -40,8 +40,7 @@
     
       
         
-<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-90728111-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-90728111-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
@@ -51,6 +50,7 @@
   
     <body dir="ltr">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -262,6 +262,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../software/node-red/" title="Node-RED" class="md-nav__link">
+      Node-RED
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -391,6 +403,13 @@
   
     <nav class="md-nav" aria-label="TV &amp; Entertainment">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ios-tv-remote" class="md-nav__link">
+    iOS TV Remote
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#tv-app-launcher" class="md-nav__link">
@@ -524,6 +543,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ios-tv-remote" class="md-nav__link">
+    iOS TV Remote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tv-app-launcher" class="md-nav__link">
     TV App Launcher
   </a>
@@ -557,7 +583,7 @@
                 
                   <h1>Automations</h1>
                 
-                <p>All of these automations are built in Node-RED. And they're automating devices configured in Home Assistant.</p>
+                <p>All of these automations are built in <a href="/SmartHome/software/node-red/">Node-RED</a>. And they're automating devices configured in Home Assistant.</p>
 <h2 id="universal">Universal<a class="headerlink" href="#universal" title="Permanent link">&para;</a></h2>
 <h3 id="vacuum-the-floor-when-im-not-home">Vacuum the floor when I'm not home<a class="headerlink" href="#vacuum-the-floor-when-im-not-home" title="Permanent link">&para;</a></h3>
 <p>At 10am a check is executed whether the apartment is occupied or not. If it's not occupied the Roomba is triggered to start vacuuming the floor. If the apartment is occupied a notification is sent to me via Telegram to inform me that the cleaning cycle was not started.</p>
@@ -608,6 +634,22 @@ That washing/drying has finished is detected via the power consumption of the re
 <p>I've set up a charging station for various camera batteries, drone, battery pack etc. To prevent them from being charged constantly I've set up a myStrom switch that is turned off after 5h. So if I plan on going somewhere where I need a fully charged battery in one of these devices I can simply say "Okay Google turn on the charging station" and forget about it. It's quite simple but very convenient.</p>
 <p><img alt="Charging Station Node-RED" src="charging-station-automation.png" style="width:500px" /></p>
 <h2 id="tv-entertainment">TV &amp; Entertainment<a class="headerlink" href="#tv-entertainment" title="Permanent link">&para;</a></h2>
+<h3 id="ios-tv-remote">iOS TV Remote<a class="headerlink" href="#ios-tv-remote" title="Permanent link">&para;</a></h3>
+<p>iOS has a virtual TV remote in the control center. This remote can be used to control Apple TVs but also Homekit-compatible TVs of other manufacturers. Since my TV doesn't support Homekit natively I wanted to recreate this feature using a <a href="/SmartHome/hardware/#logitech-harmony-hub">Logitech IR</a> blaster that sends the remote control commands to the TV.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Samsung TV playing nice with the native iOS remote utility 😄 - of course using <a href="https://twitter.com/home_assistant?ref_src=twsrc%5Etfw">@home_assistant</a> for the integration. The commands are sent over IR so really any TV could be added like this <a href="https://t.co/tehkkdGzei">pic.twitter.com/tehkkdGzei</a></p>&mdash; Theo Winter (@eletiy) <a href="https://twitter.com/eletiy/status/1281320444931514382?ref_src=twsrc%5Etfw">July 9, 2020</a></blockquote>
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p><img alt="Samsung iOS TV Remote" src="apple-tv-remote.png" /></p>
+<p>So what it does is listen to <code>homekit_tv_remote_key_pressed</code> events, check that they're for the correct TV and then map them to the individual IR blaster commands. E.g. <code>payload.event.key_name = arrow_left</code> maps to <code>remote.send_command</code> with the following payload:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;device&quot;</span><span class="p">:</span> <span class="s2">&quot;Samsung TV&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;DirectionLeft&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
 <h3 id="tv-app-launcher">TV App Launcher<a class="headerlink" href="#tv-app-launcher" title="Permanent link">&para;</a></h3>
 <p>This one is a bit of a monster. Basically what it allows is to have a Channel selector drop down in the frontend where you can choose the App that should
 be launched/switch to on the TV. As an added benefit this also work with Google Home. So I can say stuff like:</p>
@@ -640,7 +682,7 @@ be launched/switch to on the TV. As an added benefit this also work with Google 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../software/knx/" title="KNX" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../software/node-red/" title="Node-RED" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -649,7 +691,7 @@ be launched/switch to on the TV. As an added benefit this also work with Google 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                KNX
+                Node-RED
               </div>
             </div>
           </a>
@@ -696,15 +738,15 @@ be launched/switch to on the TV. As an added benefit this also work with Google 
       
     </div>
     
-      <script src="../assets/javascripts/vendor.83fe6e3c.min.js"></script>
-      <script src="../assets/javascripts/bundle.7e1cb91c.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.592d4e23.min.js"></script>
+      <script src="../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.37585f48.min.js"
+            worker: "../assets/javascripts/worker/search.01088dc6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
