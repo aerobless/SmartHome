@@ -1,4 +1,9 @@
-[Home Assistant](https://home-assistant.io/) is the brains of the whole operation. It controls all my smart devices and it provides a bit of an integration layer to connect everything to Google Home and Apple Homekit.
+[Home Assistant](https://home-assistant.io/) is the brains of the whole operation. It controls all my smart devices and it provides a bit of an integration layer to connect everything to the Google Home and Apple Homekit ecosystems.
+
+## Configuration
+Home Assistant is configured over its UI and a set of .yaml configuration files. Most of my configuration is checked in [here](https://github.com/aerobless/home-assistant-configuration). The entry point of the configuration is the [configuration.yaml](https://github.com/aerobless/home-assistant-configuration/blob/master/configuration.yaml) file at the root of the repository. To keep the configuration easier to maintain and read I've split off several sub configurations. You can recognize those by the `!include example.yaml` instructions in the main configuration.yaml.
+
+Passwords, auth tokens and other secrets are stored in a secrets.yaml file that is not checked in. You can recognize those by the `!secret id` instructions in the configuration.
 
 ## Screens
 

@@ -1,5 +1,5 @@
 
-All of these automations are built in Node-RED. And they're automating devices configured in Home Assistant.
+All of these automations are built in [Node-RED](/SmartHome/software/node-red/). And they're automating devices configured in Home Assistant.
 
 ## Universal
 
@@ -68,6 +68,24 @@ I've set up a charging station for various camera batteries, drone, battery pack
 ![Charging Station Node-RED](charging-station-automation.png){: style="width:500px"}
 
 ## TV & Entertainment
+
+### iOS TV Remote
+iOS has a virtual TV remote in the control center. This remote can be used to control Apple TVs but also Homekit-compatible TVs of other manufacturers. Since my TV doesn't support Homekit natively I wanted to recreate this feature using a [Logitech IR](/SmartHome/hardware/#logitech-harmony-hub) blaster that sends the remote control commands to the TV.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Samsung TV playing nice with the native iOS remote utility 😄 - of course using <a href="https://twitter.com/home_assistant?ref_src=twsrc%5Etfw">@home_assistant</a> for the integration. The commands are sent over IR so really any TV could be added like this <a href="https://t.co/tehkkdGzei">pic.twitter.com/tehkkdGzei</a></p>&mdash; Theo Winter (@eletiy) <a href="https://twitter.com/eletiy/status/1281320444931514382?ref_src=twsrc%5Etfw">July 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+![Samsung iOS TV Remote](apple-tv-remote.png)
+
+So what it does is listen to `homekit_tv_remote_key_pressed` events, check that they're for the correct TV and then map them to the individual IR blaster commands. E.g. `payload.event.key_name = arrow_left` maps to `remote.send_command` with the following payload:
+
+```json
+{
+    "device": "Samsung TV",
+    "command": [
+        "DirectionLeft"
+    ]
+}
+```
 
 ### TV App Launcher
 This one is a bit of a monster. Basically what it allows is to have a Channel selector drop down in the frontend where you can choose the App that should

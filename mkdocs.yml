@@ -13,6 +13,7 @@ nav:
     - Overview: software/overview.md
     - Home Assistant: software/home-assistant.md
     - KNX: software/knx/index.md
+    - Node-RED: software/node-red/index.md
   - Automations: automations/index.md
 
 theme:

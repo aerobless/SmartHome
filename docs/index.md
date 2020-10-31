@@ -8,4 +8,4 @@ still very much a work in progress so it might be a bit rough around the edges.
 + [Hardware](hardware/)
 
 ## Technology Overview
-[![Smart Home Overview](smart-home-overview.jpg)](https://www.draw.io/#Uhttps://aerobless.github.io/SmartHome/smart-home.drawio)
+[![Smart Home Overview](smart-home-overview.jpg)](/smart-home-overview.jpg)
