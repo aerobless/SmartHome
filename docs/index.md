@@ -8,4 +8,4 @@ still very much a work in progress so it might be a bit rough around the edges.
 + [Hardware](hardware/)
 
 ## Technology Overview
-[![Smart Home Overview](smart-home-overview.jpg)](/smart-home-overview.jpg)
+[![Smart Home Overview](smart-home-overview.jpg)](smart-home-overview.jpg)

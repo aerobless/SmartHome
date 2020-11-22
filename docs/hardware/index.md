@@ -104,12 +104,9 @@ Used to control TV, external speakers and air conditioner.
 ### ZigBee
 
 #### Dresden Elektronik ConBee Stick
-I use a Dresden Elektronik ConBee stick as ZigBee gateway for most of my ZigBee devices. I'd like to use it exclusively, however I've been having some trouble with the new Bluetooth-enabled Philips Hue bulbs. So those few new gen Philips Hue bulbs are connected to a normal Hue Hub. The ConBee stick is plugged directly into the Intel Nuc running Home Assistant.
+I use a Dresden Elektronik ConBee stick as ZigBee gateway for all of my ZigBee devices. The ConBee stick is plugged directly into the Intel Nuc running Home Assistant. In Home Assistant I'm using the deCONZ addon for adding and configuring ZigBee devices.
 
 ![ConBee](conbee.jpg){: style="height:50px"}
-
-#### Philips Hue Hub v2
-I use this hub only to connect to newer Philips Hue bulbs that don't yet work with the ConBee ZigBee stick. I'd prefer to not use this hub because it is only connected to Home Assistant via Polling, this makes it slower then the ZigBee stick. It also doesn't support the Xiaomi ZigBee sensors and those sensors benefit from having powered devices nearby. So I try to have all ZigBee devices in the mesh connected to the Dresden Elektronik ConBee Stick.
 
 ### WiFi & Ethernet
 
