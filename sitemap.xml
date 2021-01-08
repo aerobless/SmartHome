@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://aerobless.github.io/SmartHome/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2021-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://aerobless.github.io/SmartHome/hardware/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2021-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://aerobless.github.io/SmartHome/software/overview/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2021-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://aerobless.github.io/SmartHome/software/home-assistant/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2021-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://aerobless.github.io/SmartHome/software/knx/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2021-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://aerobless.github.io/SmartHome/software/node-red/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2021-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://aerobless.github.io/SmartHome/automations/</loc>
-     <lastmod>2020-11-22</lastmod>
+     <lastmod>2021-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

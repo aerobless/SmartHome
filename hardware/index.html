@@ -268,13 +268,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#philips-hue" class="md-nav__link">
-    Philips Hue
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#withings-sleep" class="md-nav__link">
     Withings Sleep
   </a>
@@ -323,8 +316,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#shelly-1pm_1" class="md-nav__link">
-    Shelly 1PM
+  <a href="#shelly-25" class="md-nav__link">
+    Shelly 2.5
   </a>
   
 </li>
@@ -375,7 +368,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#philips-hue_1" class="md-nav__link">
+  <a href="#philips-hue" class="md-nav__link">
     Philips Hue
   </a>
   
@@ -463,15 +456,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#d-link-dgs-105" class="md-nav__link">
-    D-Link DGS-105
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#google-wifi" class="md-nav__link">
-    Google Wifi
+  <a href="#google-nest-wifi" class="md-nav__link">
+    Google Nest Wifi
   </a>
   
 </li>
@@ -556,8 +542,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nfc-tags" class="md-nav__link">
-    NFC Tags
+  <a href="#home-assistant-tag-reader" class="md-nav__link">
+    Home Assistant Tag Reader
   </a>
   
 </li>
@@ -791,13 +777,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#philips-hue" class="md-nav__link">
-    Philips Hue
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#withings-sleep" class="md-nav__link">
     Withings Sleep
   </a>
@@ -846,8 +825,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#shelly-1pm_1" class="md-nav__link">
-    Shelly 1PM
+  <a href="#shelly-25" class="md-nav__link">
+    Shelly 2.5
   </a>
   
 </li>
@@ -898,7 +877,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#philips-hue_1" class="md-nav__link">
+  <a href="#philips-hue" class="md-nav__link">
     Philips Hue
   </a>
   
@@ -986,15 +965,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#d-link-dgs-105" class="md-nav__link">
-    D-Link DGS-105
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#google-wifi" class="md-nav__link">
-    Google Wifi
+  <a href="#google-nest-wifi" class="md-nav__link">
+    Google Nest Wifi
   </a>
   
 </li>
@@ -1079,8 +1051,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nfc-tags" class="md-nav__link">
-    NFC Tags
+  <a href="#home-assistant-tag-reader" class="md-nav__link">
+    Home Assistant Tag Reader
   </a>
   
 </li>
@@ -1177,13 +1149,14 @@
 <h2 id="computers">Computers<a class="headerlink" href="#computers" title="Permanent link">&para;</a></h2>
 <h3 id="intel-nuc-baby-canyon-nuc7i3bnh">Intel NUC Baby Canyon NUC7i3BNH<a class="headerlink" href="#intel-nuc-baby-canyon-nuc7i3bnh" title="Permanent link">&para;</a></h3>
 <p>The brains of my whole Smart Home setup. It's sporting a Intel i3-7100U CPU clocking 2.4 GHz, 2x 8GB DDR-4 Ram and an Intel 545 256GB SSD.
-As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home Assistant.</p>
+As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home Assistant. I'm currently running Home Assistant as a supervised installation (HA Core + Supervisor).</p>
 <p><img alt="Intel NUC" src="intel-nuc.jpg" style="height:150px" /></p>
 <h3 id="raspberry-pi-zero">Raspberry PI Zero<a class="headerlink" href="#raspberry-pi-zero" title="Permanent link">&para;</a></h3>
 <p>Just a Raspberry Pi Zero running a headless Raspbian image. I use it as a BLE to MQTT gateway for the Xiaomi Flower Care sensors in my loggia. When triggered it will poll all the Flower Care sensors and forward their values over MQTT.</p>
 <h2 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h2>
 <h3 id="xiaomi">Xiaomi<a class="headerlink" href="#xiaomi" title="Permanent link">&para;</a></h3>
-<p>I have a lot of Xiaomi sensors. They're all paired to the Dresden Elektronik ConBee ZigBee stick</p>
+<p>I have a lot of Xiaomi sensors. They're all paired to the Dresden Elektronik ConBee ZigBee stick. Xiaomi products are best bought on AliExpress although swiss retailers such as Galaxus now have them as well for a steep markup. The ZigBee sensors use the nearest cable-powered device to access the mesh network, so that the least bit of energy is needed. In my experience the battery life of their coin-cells last around 1-2years even for frequently used devices such as door sensors. The battery life is however a bit reduced if the sensor is exposed to the cold. My outside temperature sensor typically only lasts a few months. It probably also needs more energy since the signal has to pass through thick walls/insulated windows.</p>
+<p>The Xiaomi Flower Care sensors use BLE to report their values. Although Home Assistant provides a direct integration I cannot use it since my Home Assistant computer is too far away from where I've placed the sensors. So I'm using a Raspberry Pi Zero to collect the sensor values via BLE and then send them on the Home Assistant over MQTT.</p>
 <table>
 <thead>
 <tr>
@@ -1195,32 +1168,31 @@ As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home 
 </thead>
 <tbody>
 <tr>
-<td>Aqara Shock Sensor</td>
+<td><a href="https://www.aqara.com/us/vibration_sensor.html">Aqara Vibration Sensor</a></td>
 <td>Detects movement</td>
 <td>Vibration, Temperature</td>
 <td>ZigBee</td>
 </tr>
 <tr>
-<td>Aqara Temperature Sensor</td>
+<td><a href="https://www.aqara.com/us/temperature_humidity_sensor.html">Aqara Temperature Sensor</a></td>
 <td>Reports temperature, humidity etc.</td>
 <td>Temperature, Humidity, Atmospheric Pressure</td>
 <td>ZigBee</td>
 </tr>
 <tr>
-<td>Xiaomi Flower Care</td>
+<td><a href="https://www.amazon.de/-/en/Xiaomi-Flower-Smart-Sensor-Monitor/dp/B074TY93JM">Xiaomi Flower Care</a></td>
 <td>Reports soil status.</td>
 <td>Water level, temperature, fertilizer</td>
 <td>BLE</td>
 </tr>
 <tr>
-<td>Aqara Door Sensor</td>
+<td><a href="https://www.aqara.com/us/door_and_window_sensor.html">Aqara Door Sensor</a></td>
 <td>Detects door open/closed</td>
 <td>open/close</td>
 <td>ZigBee</td>
 </tr>
 </tbody>
 </table>
-<h3 id="philips-hue">Philips Hue<a class="headerlink" href="#philips-hue" title="Permanent link">&para;</a></h3>
 <h3 id="withings-sleep">Withings Sleep<a class="headerlink" href="#withings-sleep" title="Permanent link">&para;</a></h3>
 <p>It's main purpose is to record my sleep patterns and store them in Apple Health. However as an added benefit I can use it detect when the bed is occupied and e.g. automatically turn off lights.</p>
 <p><img alt="Withings Sleep" src="withings_sleep.png" style="height:150px" /></p>
@@ -1233,7 +1205,7 @@ As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home 
 <h4 id="shelly-1pm">Shelly 1PM<a class="headerlink" href="#shelly-1pm" title="Permanent link">&para;</a></h4>
 <p>This shelly switches on power line / button. It also measure the power consumed.</p>
 <p><img alt="Shelly 1PM" src="shelly_1pm.jpg" style="height:150px" /></p>
-<h4 id="shelly-1pm_1">Shelly 1PM<a class="headerlink" href="#shelly-1pm_1" title="Permanent link">&para;</a></h4>
+<h4 id="shelly-25">Shelly 2.5<a class="headerlink" href="#shelly-25" title="Permanent link">&para;</a></h4>
 <p>This shelly switches two power lines / buttons. It also measures the power consumed. It could also be used to control electric blinds, but I don't use it for that.</p>
 <p><img alt="Shelly 2.5" src="shelly_25.jpg" style="height:150px" /></p>
 <h3 id="mystrom-switch">MyStrom Switch<a class="headerlink" href="#mystrom-switch" title="Permanent link">&para;</a></h3>
@@ -1280,10 +1252,12 @@ In my apartment I've deployed 5 Google Home devices to reach 100% coverage of vo
 </tbody>
 </table>
 <h2 id="lights">Lights<a class="headerlink" href="#lights" title="Permanent link">&para;</a></h2>
-<h3 id="philips-hue_1">Philips Hue<a class="headerlink" href="#philips-hue_1" title="Permanent link">&para;</a></h3>
-<p>I use mostly Philips Hue lightbulbs.</p>
+<h3 id="philips-hue">Philips Hue<a class="headerlink" href="#philips-hue" title="Permanent link">&para;</a></h3>
+<p>I use mostly Philips Hue light bulbs. They work well and are easily paired.</p>
 <ul>
-<li>Philips Filament</li>
+<li>Philips Hue Filament BT</li>
+<li>Philips Hue GU10 Spot Color BT</li>
+<li>Philips Hue E26 Color</li>
 </ul>
 <h4 id="nanoleaf-aurora">Nanoleaf Aurora<a class="headerlink" href="#nanoleaf-aurora" title="Permanent link">&para;</a></h4>
 <p>A smart light consisting of triangle shaped LED panels. The panels can be arranged in any pattern desired. It can also be animated with or without music. The Nanoleaf connects to Home Assistant over WiFi.</p>
@@ -1291,19 +1265,22 @@ In my apartment I've deployed 5 Google Home devices to reach 100% coverage of vo
 <h2 id="wireless-network-hubs">Wireless Network Hubs<a class="headerlink" href="#wireless-network-hubs" title="Permanent link">&para;</a></h2>
 <h3 id="infrared">Infrared<a class="headerlink" href="#infrared" title="Permanent link">&para;</a></h3>
 <h4 id="logitech-harmony-hub">Logitech Harmony Hub<a class="headerlink" href="#logitech-harmony-hub" title="Permanent link">&para;</a></h4>
-<p>Used to control TV, external speakers and air conditioner.</p>
+<p>Logitech Harmony Hub is a infrared broadcast device that is accessed over wifi. It can be directly integrated into Home Assistant. From Home Assistant infrared codes can be sent to control various devices. In my setup I use it to control the TV, speakers and in summer the AC machine.</p>
 <p><img alt="Logitech Harmony Hub" src="logitech_harmony_hub.jpg" style="height:50px" /></p>
 <h3 id="zigbee">ZigBee<a class="headerlink" href="#zigbee" title="Permanent link">&para;</a></h3>
 <h4 id="dresden-elektronik-conbee-stick">Dresden Elektronik ConBee Stick<a class="headerlink" href="#dresden-elektronik-conbee-stick" title="Permanent link">&para;</a></h4>
-<p>I use a Dresden Elektronik ConBee stick as ZigBee gateway for all of my ZigBee devices. The ConBee stick is plugged directly into the Intel Nuc running Home Assistant. In Home Assistant I'm using the deCONZ addon for adding and configuring ZigBee devices.</p>
+<p>I use a Dresden Elektronik ConBee stick as ZigBee gateway for all of my ZigBee devices. The ConBee is a USB stick that's plugged directly into the Intel Nuc running Home Assistant. In Home Assistant I'm using the deCONZ addon for adding and configuring ZigBee devices.</p>
 <p><img alt="ConBee" src="conbee.jpg" style="height:50px" /></p>
 <h3 id="wifi-ethernet">WiFi &amp; Ethernet<a class="headerlink" href="#wifi-ethernet" title="Permanent link">&para;</a></h3>
 <h4 id="fritzbox-5490">FRITZ!Box 5490<a class="headerlink" href="#fritzbox-5490" title="Permanent link">&para;</a></h4>
-<p>The router recommended by my internet provider (Init 7). This is the fiber version. It works very well and I'm quite happy. It's easy to set static IPs in the local network and port forwarding works well. I don't use the WiFi feature.</p>
+<p>I'm using the Fritz!Box 5490 as router and DHCP server. This is the fiber version. It works well and it's easy to configure &amp; manage static IPs which is something you have to do often in a well organized Smart Home setup. I'm not using the wifi-router functionality because it's not located ideally for spreading the wifi signal. I'm also not using any of Fritz!'s smart home features.</p>
 <p><img alt="FRITZ!Box 5490" src="fritzbox5490.jpg" style="height:150px" /></p>
-<h4 id="d-link-dgs-105">D-Link DGS-105<a class="headerlink" href="#d-link-dgs-105" title="Permanent link">&para;</a></h4>
-<h4 id="google-wifi">Google Wifi<a class="headerlink" href="#google-wifi" title="Permanent link">&para;</a></h4>
-<p>I use this only because it's made by Google and looks quite nice.</p>
+<h4 id="google-nest-wifi">Google Nest Wifi<a class="headerlink" href="#google-nest-wifi" title="Permanent link">&para;</a></h4>
+<p>I use a single Google Nest Wifi as my access point. It provides fast wireless access at gigabit speeds and has various optimizations for multi-device access as well as future compatibility to BLE and Thread for smart home device integrations. Additionally it looks nice and can be placed openly which improves the spread of the wifi signal as well. I run my Nest Wifi in bridge mode, which means it's DHCP server functionality is disabled and it simply extends my LAN over wifi.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Beware that Google Nest Wifi does not support mesh networking in bridge mode. So if you're using a Fritz!Box or similar router for managing statics IPs you cannot run a Google Nest Wifi mesh network. This is a bit of a downside, so I would not recommend using this wifi router if you're planning to run a mesh network.</p>
+</div>
 <p><img alt="Google Wifi" src="google_wifi.jpg" style="height:150px" /></p>
 <h2 id="tv-entertainment">TV &amp; Entertainment<a class="headerlink" href="#tv-entertainment" title="Permanent link">&para;</a></h2>
 <h4 id="samsung-qe65q7f">Samsung QE65Q7F<a class="headerlink" href="#samsung-qe65q7f" title="Permanent link">&para;</a></h4>
@@ -1313,7 +1290,7 @@ In my apartment I've deployed 5 Google Home devices to reach 100% coverage of vo
 <p>A game console. It can be controlled by Home Assistant via ethernet/WiFi.</p>
 <p><img alt="PlayStation 4 Pro" src="ps4_pro.jpg" style="height:150px" /></p>
 <h4 id="apple-tv-4k-32gb">Apple TV 4K 32GB<a class="headerlink" href="#apple-tv-4k-32gb" title="Permanent link">&para;</a></h4>
-<p>I originally bought this as a way to expose Apple Homekit for remote access. However I've since stopped using Homekit almost entirely. It still sees occasional use an airplay display. </p>
+<p>I originally bought this as a way to expose Apple Homekit for remote access. However I've since stopped using Homekit almost entirely. It's still useful for casting photos &amp; videos from an iOS device and to watch IPTV from Init7.</p>
 <p><img alt="Apple TV 4k" src="apple_tv_4k.jpg" style="height:100px" /></p>
 <h4 id="nvidia-shield-tv">Nvidia Shield TV<a class="headerlink" href="#nvidia-shield-tv" title="Permanent link">&para;</a></h4>
 <p>I originally bought this because I thought Android TV was cool. I rarely use it. It serves as a Chromecast occasionally.. but that's really all there is to it.</p>
@@ -1323,7 +1300,8 @@ In my apartment I've deployed 5 Google Home devices to reach 100% coverage of vo
 <p>The Nello One is a interesting device. It's installed as a middle man between the buildings intercom/door opener system. It allows me to open the apartment buildings main door from my phone instead of with a key. The way it does this is by emulating a button press (door open) on the intercom device.</p>
 <p><img alt="Nello One" src="nello_one.jpg" style="height:100px" /></p>
 <h2 id="nfc">NFC<a class="headerlink" href="#nfc" title="Permanent link">&para;</a></h2>
-<h3 id="nfc-tags">NFC Tags<a class="headerlink" href="#nfc-tags" title="Permanent link">&para;</a></h3>
+<h3 id="home-assistant-tag-reader">Home Assistant Tag Reader<a class="headerlink" href="#home-assistant-tag-reader" title="Permanent link">&para;</a></h3>
+<p>I'm using a <a href="https://github.com/adonno/tagreader">Home Assistant Tag reader</a> to read various NFC tags. For example I have NFC cards for various light scenes that aren't used that frequently (e.g. party scene). I also plan on using this for Spotify playlists and other things that aren't so easily exposed in the physical world.</p>
 <h2 id="blinds">Blinds<a class="headerlink" href="#blinds" title="Permanent link">&para;</a></h2>
 <h4 id="knx-controller-9x-aktor-mgx-9">KNX Controller 9x Aktor MGX-9<a class="headerlink" href="#knx-controller-9x-aktor-mgx-9" title="Permanent link">&para;</a></h4>
 <p>The KNX blinds controller is pre-installed in the apartment. One thing I learned about KNX is that you can't download an existing configuration of a controller. You can just overwrite it. This has led to some issues where the building couldn't control the blinds anymore once I wrote my own configuration onto the controller. Luckily I was able to get the source files for the original configuration from a technician and add my own KNX addresses to it. So now the building can still lock my blinds for maintenance or high winds but I can also control them via Home Assistant. KNX devices are configured with <a href="https://www.knx.org/knx-en/for-professionals/software/ets-5-professional/index.php">ETS</a> which is available for free for personal use (up to 5 devices).</p>
@@ -1333,13 +1311,13 @@ In my apartment I've deployed 5 Google Home devices to reach 100% coverage of vo
 <p><img alt="KNX IP Interface 731" src="knx-ip-interface.png" style="height:150px" /></p>
 <h2 id="other-smart-devices">Other Smart Devices<a class="headerlink" href="#other-smart-devices" title="Permanent link">&para;</a></h2>
 <h4 id="kibernetik-air-conditioner">Kibernetik Air Conditioner<a class="headerlink" href="#kibernetik-air-conditioner" title="Permanent link">&para;</a></h4>
-<p>A simple AC device. Communicates over IR.</p>
+<p>A simple AC device. Can be controlled over infrared. I use the Logitech Harmony Hub to do this.</p>
 <p><img alt="Kibernetik Air Conditioner" src="kibernetik-klimageraet-mk-light-001.xxl3.jpg" style="height:150px" /></p>
 <h4 id="irobot-roomba-980">iRobot Roomba 980<a class="headerlink" href="#irobot-roomba-980" title="Permanent link">&para;</a></h4>
-<p>Smart vacuum robot that communicates over WiFi. It's actually running Linux and you can connect to it via SSH. Pretty dope, no? :D</p>
+<p>Smart vacuum robot that communicates over WiFi. It's actually running Linux and you can connect to it over SSH. I'm happy with it's cleaning capabilities. The vacuum is started from a schedule in Home Assistant but only when Home Assistant sees that I'm not home.</p>
 <p><img alt="iRobot Roomba 980 Topdown" src="roomba_980.jpg" style="height:150px" /></p>
 <h4 id="oral-b-elektro-genius-10100s">Oral-B Elektro Genius 10100S<a class="headerlink" href="#oral-b-elektro-genius-10100s" title="Permanent link">&para;</a></h4>
-<p>Smart toothbrush that communicates over BLE.</p>
+<p>Smart toothbrush that communicates over BLE. I haven't integrated this yet.. but it's on the list ;-)</p>
 <p><img alt="Oral-B Genius 10100S" src="oral_b_genius_10100S.jpg" style="height:150px" /></p>
                 
               
