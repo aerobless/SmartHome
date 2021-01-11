@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -8,29 +6,36 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Building a Smart Home with Home Assistant and Node RED. Documentation & Tutorials of all things Smart Home.">
       
-        <link rel="canonical" href="https://sixtymeters.com/automations/">
       
       
         <meta name="author" content="Theo Winter">
       
+      
+        <link rel="canonical" href="https://sixtymeters.com/automations/">
+      
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
-        <title>Automations - Smart Home</title>
+        <title>Automations - SixtyMeters - Smart Home</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5d00201e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.15aa0b43.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.75751829.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -48,7 +53,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -66,9 +77,11 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://sixtymeters.com" title="Smart Home" class="md-header-nav__button md-logo" aria-label="Smart Home">
+    <a href="https://sixtymeters.com" title="SixtyMeters - Smart Home" class="md-header-nav__button md-logo" aria-label="SixtyMeters - Smart Home">
       
   <img src="../logo.svg" alt="logo">
 
@@ -77,18 +90,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
-            Smart Home
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            SixtyMeters - Smart Home
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Automations
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -99,7 +114,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -140,26 +155,101 @@
     
     <div class="md-container" data-md-component="container">
       
+      
         
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
       
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
       
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../hardware/" class="md-tabs__link">
+        Hardware
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../software/overview/" class="md-tabs__link">
+        Software
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Automations
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://sixtymeters.com" title="Smart Home" class="md-nav__button md-logo" aria-label="Smart Home">
+    <a href="https://sixtymeters.com" title="SixtyMeters - Smart Home" class="md-nav__button md-logo" aria-label="SixtyMeters - Smart Home">
       
   <img src="../logo.svg" alt="logo">
 
     </a>
-    Smart Home
+    SixtyMeters - Smart Home
   </label>
   
     <div class="md-nav__source">
@@ -182,8 +272,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
+    <a href=".." class="md-nav__link">
       Home
     </a>
   </li>
@@ -194,34 +285,21 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../hardware/" title="Hardware" class="md-nav__link">
-      Hardware
-    </a>
-  </li>
 
-    
-      
-      
-      
-
-
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-3">
-      Software
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      Hardware
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Software" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Software
+    <nav class="md-nav" aria-label="Hardware" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Hardware
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -231,8 +309,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../software/overview/" title="Overview" class="md-nav__link">
+    <a href="../hardware/" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -243,8 +322,194 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../software/home-assistant/" title="Home Assistant" class="md-nav__link">
+    <a href="../hardware/computers/" class="md-nav__link">
+      Computers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/sensors/" class="md-nav__link">
+      Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/power-switches/" class="md-nav__link">
+      Power Switches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/voice-assistants/" class="md-nav__link">
+      Voice Assistants
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/lights/" class="md-nav__link">
+      Lights
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/networking/" class="md-nav__link">
+      Networking & Mesh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/entertainment/" class="md-nav__link">
+      TV & Entertainment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/locks/" class="md-nav__link">
+      Locks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/blinds/" class="md-nav__link">
+      Blinds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/nfc/" class="md-nav__link">
+      NFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/miscellaneous/" class="md-nav__link">
+      Miscellaneous
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      Software
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Software" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Software
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../software/overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../software/home-assistant/" class="md-nav__link">
       Home Assistant
     </a>
   </li>
@@ -255,8 +520,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../software/knx/" title="KNX" class="md-nav__link">
+    <a href="../software/knx/" class="md-nav__link">
       KNX
     </a>
   </li>
@@ -267,8 +533,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../software/node-red/" title="Node-RED" class="md-nav__link">
+    <a href="../software/node-red/" class="md-nav__link">
       Node-RED
     </a>
   </li>
@@ -283,6 +550,7 @@
       
       
 
+
   
 
 
@@ -293,12 +561,10 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Automations
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Automations" class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Automations
     </a>
     
@@ -308,9 +574,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -437,137 +701,6 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#universal" class="md-nav__link">
-    Universal
-  </a>
-  
-    <nav class="md-nav" aria-label="Universal">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vacuum-the-floor-when-im-not-home" class="md-nav__link">
-    Vacuum the floor when I'm not home
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lights" class="md-nav__link">
-    Lights
-  </a>
-  
-    <nav class="md-nav" aria-label="Lights">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kitchen-overhead-light" class="md-nav__link">
-    Kitchen Overhead Light
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shelly-light-switches" class="md-nav__link">
-    Shelly Light Switches
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bathroom-light" class="md-nav__link">
-    Bathroom Light
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#devices" class="md-nav__link">
-    Devices
-  </a>
-  
-    <nav class="md-nav" aria-label="Devices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#washing-machinedryer-has-finished" class="md-nav__link">
-    Washing machine/dryer has finished
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#turn-off-the-charging-station" class="md-nav__link">
-    Turn off the charging station
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tv-entertainment" class="md-nav__link">
-    TV &amp; Entertainment
-  </a>
-  
-    <nav class="md-nav" aria-label="TV &amp; Entertainment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ios-tv-remote" class="md-nav__link">
-    iOS TV Remote
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tv-app-launcher" class="md-nav__link">
-    TV App Launcher
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -578,9 +711,6 @@
                   </a>
                 
                 
-                  
-                
-                
                   <h1>Automations</h1>
                 
                 <p>All of these automations are built in <a href="/SmartHome/software/node-red/">Node-RED</a>. And they're automating devices configured in Home Assistant.</p>
@@ -588,6 +718,195 @@
 <h3 id="vacuum-the-floor-when-im-not-home">Vacuum the floor when I'm not home<a class="headerlink" href="#vacuum-the-floor-when-im-not-home" title="Permanent link">&para;</a></h3>
 <p>At 10am a check is executed whether the apartment is occupied or not. If it's not occupied the Roomba is triggered to start vacuuming the floor. If the apartment is occupied a notification is sent to me via Telegram to inform me that the cleaning cycle was not started.</p>
 <p><img alt="Roomba Cleaning Node-RED" src="roomba-cleaning-automation.png" /></p>
+<details><summary>Node RED Flow</summary><div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27f43369.1137ec&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;subflow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;apartment occupied?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;info&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;in&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mf">181.5</span><span class="p">,</span>
+                <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
+                <span class="s2">&quot;wires&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;cbbdb47d.a4ed48&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;out&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span>
+                <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+                <span class="s2">&quot;wires&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1792a55d.ddc24b&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span>
+                <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+                <span class="s2">&quot;wires&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1792a55d.ddc24b&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;outputLabels&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;clear&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;occupied&quot;</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;cbbdb47d.a4ed48&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;api-current-state&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="s2">&quot;27f43369.1137ec&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;apartment occupancy&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;server&quot;</span><span class="p">:</span> <span class="s2">&quot;78fe396.483dac8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;outputs&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;halt_if&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;halt_if_type&quot;</span><span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;halt_if_compare&quot;</span><span class="p">:</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;override_topic&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;entity_id&quot;</span><span class="p">:</span> <span class="s2">&quot;binary_sensor.apartment_occupancy&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;state_type&quot;</span><span class="p">:</span> <span class="s2">&quot;habool&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;override_payload&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;override_data&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mf">361.5</span><span class="p">,</span>
+        <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
+        <span class="s2">&quot;wires&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;1792a55d.ddc24b&quot;</span>
+            <span class="p">]</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1792a55d.ddc24b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;switch&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="s2">&quot;27f43369.1137ec&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;is occupied?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;property&quot;</span><span class="p">:</span> <span class="s2">&quot;payload&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;propertyType&quot;</span><span class="p">:</span> <span class="s2">&quot;msg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;checkall&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;repair&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;outputs&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mf">554.5</span><span class="p">,</span>
+        <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
+        <span class="s2">&quot;wires&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">[],</span>
+            <span class="p">[]</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;74556465.5e1fac&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;api-call-service&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="s2">&quot;d3ff7562.eebf38&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Roomba ON&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;server&quot;</span><span class="p">:</span> <span class="s2">&quot;78fe396.483dac8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;debugenabled&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;service_domain&quot;</span><span class="p">:</span> <span class="s2">&quot;vacuum&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;start&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;entityId&quot;</span><span class="p">:</span> <span class="s2">&quot;vacuum.ghost&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dataType&quot;</span><span class="p">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mergecontext&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;output_location&quot;</span><span class="p">:</span> <span class="s2">&quot;payload&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;output_location_type&quot;</span><span class="p">:</span> <span class="s2">&quot;msg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mustacheAltTags&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mi">570</span><span class="p">,</span>
+        <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+        <span class="s2">&quot;wires&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">[]</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d5a40336.045ed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;inject&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="s2">&quot;d3ff7562.eebf38&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;10am weekdays&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;repeat&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;crontab&quot;</span><span class="p">:</span> <span class="s2">&quot;00 10 * * 1,2,3,4,5&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;once&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;onceDelay&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;payload&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;payloadType&quot;</span><span class="p">:</span> <span class="s2">&quot;bool&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mf">144.5</span><span class="p">,</span>
+        <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;wires&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;b816139a.b3f9e&quot;</span>
+            <span class="p">]</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;b816139a.b3f9e&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;subflow:27f43369.1137ec&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="s2">&quot;d3ff7562.eebf38&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mi">360</span><span class="p">,</span>
+        <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;wires&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;74556465.5e1fac&quot;</span>
+            <span class="p">],</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;b94a88b0.eff1c8&quot;</span>
+            <span class="p">]</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;b94a88b0.eff1c8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;api-call-service&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="s2">&quot;d3ff7562.eebf38&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Telegram Log&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;server&quot;</span><span class="p">:</span> <span class="s2">&quot;78fe396.483dac8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;debugenabled&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;service_domain&quot;</span><span class="p">:</span> <span class="s2">&quot;telegram_bot&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;send_message&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;entityId&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;{</span><span class="se">\&quot;</span><span class="s2">message</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">Not launching Roomba because someone&#39;s home</span><span class="se">\&quot;</span><span class="s2">}&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dataType&quot;</span><span class="p">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mergecontext&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;output_location&quot;</span><span class="p">:</span> <span class="s2">&quot;payload&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;output_location_type&quot;</span><span class="p">:</span> <span class="s2">&quot;msg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mustacheAltTags&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mi">570</span><span class="p">,</span>
+        <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;wires&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">[]</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;78fe396.483dac8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Home Assistant&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;legacy&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;addon&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;rejectUnauthorizedCerts&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;ha_boolean&quot;</span><span class="p">:</span> <span class="s2">&quot;y|yes|true|on|home|open&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;connectionDelay&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;cacheJson&quot;</span><span class="p">:</span> <span class="n">true</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+</details>
 <h2 id="lights">Lights<a class="headerlink" href="#lights" title="Permanent link">&para;</a></h2>
 <h3 id="kitchen-overhead-light">Kitchen Overhead Light<a class="headerlink" href="#kitchen-overhead-light" title="Permanent link">&para;</a></h3>
 <p>If motion is detected at the sink, the kitchen overhead light is turned on. At the same time a timer is set for 3mins. If further motion is detected the timer is reset. If no more motion occurs and the timer runs out the light is turned off again.</p>
@@ -609,8 +928,8 @@ But then there was another problem. Since it's a dumb light tube it's a bit slow
 <p>If the washing machine or dryer finishes their work a push notification is sent to my phone and Google Home announces that the washer or dryer has finished.
 That washing/drying has finished is detected via the power consumption of the respective device with a MyStrom switch. The push notification is sent via the Home Assistant App on my phone. The Google Home announcement uses TTS (text to speech) and Chromecast functionality.</p>
 <p><img alt="Washing has finished Node-RED" src="washing-has-finished-automation.png" /></p>
-<p>Template sensor to detect if the washing machine is on/off:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">binary_sensor</span><span class="p">:</span> 
+<p>Template sensor to detect if the washing machine is on/off:
+<div class="highlight"><pre><span></span><code><span class="nt">binary_sensor</span><span class="p">:</span> 
   <span class="p p-Indicator">-</span> <span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">template</span>
     <span class="nt">sensors</span><span class="p">:</span>
         <span class="nt">washingmachine_state</span><span class="p">:</span>
@@ -619,17 +938,13 @@ That washing/drying has finished is detected via the power consumption of the re
                 <span class="nt">minutes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
             <span class="nt">icon_template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mdi:washing-machine</span>
             <span class="nt">value_template</span><span class="p">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">states.switch.mystrom_washingmachine.attributes.current_power_w</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">default(0)</span><span class="nv"> </span><span class="s">|float</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">10}}&quot;</span>
-</code></pre></div>
-
-
-<p>Push Notification</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+</code></pre></div></p>
+<p>Push Notification
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Washing Machine done 👕&quot;</span><span class="p">,</span>
     <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Don&#39;t wait for your clothes to wrinkle!&quot;</span>
 <span class="p">}</span>
-</code></pre></div>
-
-
+</code></pre></div></p>
 <h3 id="turn-off-the-charging-station">Turn off the charging station<a class="headerlink" href="#turn-off-the-charging-station" title="Permanent link">&para;</a></h3>
 <p>I've set up a charging station for various camera batteries, drone, battery pack etc. To prevent them from being charged constantly I've set up a myStrom switch that is turned off after 5h. So if I plan on going somewhere where I need a fully charged battery in one of these devices I can simply say "Okay Google turn on the charging station" and forget about it. It's quite simple but very convenient.</p>
 <p><img alt="Charging Station Node-RED" src="charging-station-automation.png" style="width:500px" /></p>
@@ -637,19 +952,17 @@ That washing/drying has finished is detected via the power consumption of the re
 <h3 id="ios-tv-remote">iOS TV Remote<a class="headerlink" href="#ios-tv-remote" title="Permanent link">&para;</a></h3>
 <p>iOS has a virtual TV remote in the control center. This remote can be used to control Apple TVs but also Homekit-compatible TVs of other manufacturers. Since my TV doesn't support Homekit natively I wanted to recreate this feature using a <a href="/SmartHome/hardware/#logitech-harmony-hub">Logitech IR</a> blaster that sends the remote control commands to the TV.</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Samsung TV playing nice with the native iOS remote utility 😄 - of course using <a href="https://twitter.com/home_assistant?ref_src=twsrc%5Etfw">@home_assistant</a> for the integration. The commands are sent over IR so really any TV could be added like this <a href="https://t.co/tehkkdGzei">pic.twitter.com/tehkkdGzei</a></p>&mdash; Theo Winter (@eletiy) <a href="https://twitter.com/eletiy/status/1281320444931514382?ref_src=twsrc%5Etfw">July 9, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 <p><img alt="Samsung iOS TV Remote" src="apple-tv-remote.png" /></p>
 <p>So what it does is listen to <code>homekit_tv_remote_key_pressed</code> events, check that they're for the correct TV and then map them to the individual IR blaster commands. E.g. <code>payload.event.key_name = arrow_left</code> maps to <code>remote.send_command</code> with the following payload:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;device&quot;</span><span class="p">:</span> <span class="s2">&quot;Samsung TV&quot;</span><span class="p">,</span>
     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">&quot;DirectionLeft&quot;</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-
-
 <h3 id="tv-app-launcher">TV App Launcher<a class="headerlink" href="#tv-app-launcher" title="Permanent link">&para;</a></h3>
 <p>This one is a bit of a monster. Basically what it allows is to have a Channel selector drop down in the frontend where you can choose the App that should
 be launched/switch to on the TV. As an added benefit this also work with Google Home. So I can say stuff like:</p>
@@ -668,7 +981,7 @@ be launched/switch to on the TV. As an added benefit this also work with Google 
 
   <h2 id="__comments">Comments</h2>
   <div id="disqus_thread"></div>
-  <script>var disqus_config=function(){this.page.url="https://sixtymeters.com/automations/",this.page.identifier="/automations/"};!function(){var e=document,i=e.createElement("script");i.src="//aerobless-smart-home.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
+  <script>var disqus_config=function(){this.page.url="https://sixtymeters.com/automations/",this.page.identifier="/automations/"};window.addEventListener("load",function(){var e=document,i=e.createElement("script");i.src="//aerobless-smart-home.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)})</script>
 
               
             </article>
@@ -682,7 +995,7 @@ be launched/switch to on the TV. As an added benefit this also work with Google 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../software/node-red/" title="Node-RED" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../software/node-red/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -738,15 +1051,15 @@ be launched/switch to on the TV. As an added benefit this also work with Google 
       
     </div>
     
-      <script src="../assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="../assets/javascripts/bundle.073197b2.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
-          features: [],
+          features: ['navigation.tabs', 'toc.integrate'],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
