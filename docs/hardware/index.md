@@ -5,7 +5,7 @@ A list of the hardware currently present in my smart home.
 
 ### Intel NUC Baby Canyon NUC7i3BNH
 The brains of my whole Smart Home setup. It's sporting a Intel i3-7100U CPU clocking 2.4 GHz, 2x 8GB DDR-4 Ram and an Intel 545 256GB SSD.
-As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home Assistant.
+As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home Assistant. I'm currently running Home Assistant as a supervised installation (HA Core + Supervisor).
 
 ![Intel NUC](intel-nuc.jpg){: style="height:150px"}
 
@@ -15,16 +15,16 @@ Just a Raspberry Pi Zero running a headless Raspbian image. I use it as a BLE to
 ## Sensors
 
 ### Xiaomi
-I have a lot of Xiaomi sensors. They're all paired to the Dresden Elektronik ConBee ZigBee stick
+I have a lot of Xiaomi sensors. They're all paired to the Dresden Elektronik ConBee ZigBee stick. Xiaomi products are best bought on AliExpress although swiss retailers such as Galaxus now have them as well for a steep markup. The ZigBee sensors use the nearest cable-powered device to access the mesh network, so that the least bit of energy is needed. In my experience the battery life of their coin-cells last around 1-2years even for frequently used devices such as door sensors. The battery life is however a bit reduced if the sensor is exposed to the cold. My outside temperature sensor typically only lasts a few months. It probably also needs more energy since the signal has to pass through thick walls/insulated windows.
+
+The Xiaomi Flower Care sensors use BLE to report their values. Although Home Assistant provides a direct integration I cannot use it since my Home Assistant computer is too far away from where I've placed the sensors. So I'm using a Raspberry Pi Zero to collect the sensor values via BLE and then send them on the Home Assistant over MQTT.
 
 | Name                     | Description                        | Sensors                                      | Communication |
 |--------------------------|------------------------------------|----------------------------------------------|---------------|
-| Aqara Shock Sensor       | Detects movement                   | Vibration, Temperature                       | ZigBee        |
-| Aqara Temperature Sensor | Reports temperature, humidity etc. | Temperature, Humidity, Atmospheric Pressure  | ZigBee        |
-| Xiaomi Flower Care       | Reports soil status.               | Water level, temperature, fertilizer         | BLE           |
-| Aqara Door Sensor        | Detects door open/closed           | open/close                                   | ZigBee        |
-
-### Philips Hue
+| [Aqara Vibration Sensor](https://www.aqara.com/us/vibration_sensor.html)       | Detects movement                   | Vibration, Temperature                       | ZigBee        |
+| [Aqara Temperature Sensor](https://www.aqara.com/us/temperature_humidity_sensor.html) | Reports temperature, humidity etc. | Temperature, Humidity, Atmospheric Pressure  | ZigBee        |
+| [Xiaomi Flower Care](https://www.amazon.de/-/en/Xiaomi-Flower-Smart-Sensor-Monitor/dp/B074TY93JM)       | Reports soil status.               | Water level, temperature, fertilizer         | BLE           |
+| [Aqara Door Sensor](https://www.aqara.com/us/door_and_window_sensor.html)        | Detects door open/closed           | open/close                                   | ZigBee        |
 
 ### Withings Sleep
 It's main purpose is to record my sleep patterns and store them in Apple Health. However as an added benefit I can use it detect when the bed is occupied and e.g. automatically turn off lights.
@@ -46,7 +46,7 @@ This shelly switches on power line / button. It also measure the power consumed.
 
 ![Shelly 1PM](shelly_1pm.jpg){: style="height:150px"}
 
-#### Shelly 1PM
+#### Shelly 2.5
 This shelly switches two power lines / buttons. It also measures the power consumed. It could also be used to control electric blinds, but I don't use it for that.
 
 ![Shelly 2.5](shelly_25.jpg){: style="height:150px"}
@@ -83,9 +83,11 @@ Okay Google ...
 ## Lights
 
 ### Philips Hue
-I use mostly Philips Hue lightbulbs.
+I use mostly Philips Hue light bulbs. They work well and are easily paired.
 
-- Philips Filament
+- Philips Hue Filament BT
+- Philips Hue GU10 Spot Color BT
+- Philips Hue E26 Color
 
 #### Nanoleaf Aurora
 A smart light consisting of triangle shaped LED panels. The panels can be arranged in any pattern desired. It can also be animated with or without music. The Nanoleaf connects to Home Assistant over WiFi.
@@ -97,28 +99,29 @@ A smart light consisting of triangle shaped LED panels. The panels can be arrang
 ### Infrared
 
 #### Logitech Harmony Hub
-Used to control TV, external speakers and air conditioner.
+Logitech Harmony Hub is a infrared broadcast device that is accessed over wifi. It can be directly integrated into Home Assistant. From Home Assistant infrared codes can be sent to control various devices. In my setup I use it to control the TV, speakers and in summer the AC machine.
 
 ![Logitech Harmony Hub](logitech_harmony_hub.jpg){: style="height:50px"}
 
 ### ZigBee
 
 #### Dresden Elektronik ConBee Stick
-I use a Dresden Elektronik ConBee stick as ZigBee gateway for all of my ZigBee devices. The ConBee stick is plugged directly into the Intel Nuc running Home Assistant. In Home Assistant I'm using the deCONZ addon for adding and configuring ZigBee devices.
+I use a Dresden Elektronik ConBee stick as ZigBee gateway for all of my ZigBee devices. The ConBee is a USB stick that's plugged directly into the Intel Nuc running Home Assistant. In Home Assistant I'm using the deCONZ addon for adding and configuring ZigBee devices.
 
 ![ConBee](conbee.jpg){: style="height:50px"}
 
 ### WiFi & Ethernet
 
 #### FRITZ!Box 5490
-The router recommended by my internet provider (Init 7). This is the fiber version. It works very well and I'm quite happy. It's easy to set static IPs in the local network and port forwarding works well. I don't use the WiFi feature.
+I'm using the Fritz!Box 5490 as router and DHCP server. This is the fiber version. It works well and it's easy to configure & manage static IPs which is something you have to do often in a well organized Smart Home setup. I'm not using the wifi-router functionality because it's not located ideally for spreading the wifi signal. I'm also not using any of Fritz!'s smart home features.
 
 ![FRITZ!Box 5490](fritzbox5490.jpg){: style="height:150px"}
 
-#### D-Link DGS-105
+#### Google Nest Wifi
+I use a single Google Nest Wifi as my access point. It provides fast wireless access at gigabit speeds and has various optimizations for multi-device access as well as future compatibility to BLE and Thread for smart home device integrations. Additionally it looks nice and can be placed openly which improves the spread of the wifi signal as well. I run my Nest Wifi in bridge mode, which means it's DHCP server functionality is disabled and it simply extends my LAN over wifi.
 
-#### Google Wifi
-I use this only because it's made by Google and looks quite nice.
+!!! warning
+    Beware that Google Nest Wifi does not support mesh networking in bridge mode. So if you're using a Fritz!Box or similar router for managing statics IPs you cannot run a Google Nest Wifi mesh network. This is a bit of a downside, so I would not recommend using this wifi router if you're planning to run a mesh network.
 
 ![Google Wifi](google_wifi.jpg){: style="height:150px"}
 
@@ -135,7 +138,7 @@ A game console. It can be controlled by Home Assistant via ethernet/WiFi.
 ![PlayStation 4 Pro](ps4_pro.jpg){: style="height:150px"}
 
 #### Apple TV 4K 32GB
-I originally bought this as a way to expose Apple Homekit for remote access. However I've since stopped using Homekit almost entirely. It still sees occasional use an airplay display. 
+I originally bought this as a way to expose Apple Homekit for remote access. However I've since stopped using Homekit almost entirely. It's still useful for casting photos & videos from an iOS device and to watch IPTV from Init7.
 
 ![Apple TV 4k](apple_tv_4k.jpg){: style="height:100px"}
 
@@ -153,7 +156,8 @@ The Nello One is a interesting device. It's installed as a middle man between th
 
 ## NFC
 
-### NFC Tags
+### Home Assistant Tag Reader
+I'm using a [Home Assistant Tag reader](https://github.com/adonno/tagreader) to read various NFC tags. For example I have NFC cards for various light scenes that aren't used that frequently (e.g. party scene). I also plan on using this for Spotify playlists and other things that aren't so easily exposed in the physical world.
 
 ## Blinds
 
@@ -170,16 +174,16 @@ This device is a interface between the KNX TP (twisted pair) and ethernet. It al
 ## Other Smart Devices
 
 #### Kibernetik Air Conditioner
-A simple AC device. Communicates over IR.
+A simple AC device. Can be controlled over infrared. I use the Logitech Harmony Hub to do this.
 
 ![Kibernetik Air Conditioner](kibernetik-klimageraet-mk-light-001.xxl3.jpg){: style="height:150px"}
 
 #### iRobot Roomba 980
-Smart vacuum robot that communicates over WiFi. It's actually running Linux and you can connect to it via SSH. Pretty dope, no? :D
+Smart vacuum robot that communicates over WiFi. It's actually running Linux and you can connect to it over SSH. I'm happy with it's cleaning capabilities. The vacuum is started from a schedule in Home Assistant but only when Home Assistant sees that I'm not home.
 
 ![iRobot Roomba 980 Topdown](roomba_980.jpg){: style="height:150px"}
 
 #### Oral-B Elektro Genius 10100S
-Smart toothbrush that communicates over BLE.
+Smart toothbrush that communicates over BLE. I haven't integrated this yet.. but it's on the list ;-)
 
 ![Oral-B Genius 10100S](oral_b_genius_10100S.jpg){: style="height:150px"}
