@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+      <a href="../home-assistant/" class="md-tabs__link md-tabs__link--active">
         Software
       </a>
     </li>
@@ -498,19 +498,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../overview/" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
     <a href="../home-assistant/" class="md-nav__link">
       Home Assistant
     </a>
@@ -621,7 +608,7 @@
                 
                   <h1>Node-RED</h1>
                 
-                <p>I use a <a href="/SmartHome/software/home-assistant/">Home Assistant</a> addon called "Node-RED" for most of my automations. Node-RED is a low-code programming tool for wiring together hardware devices, APIs and online services. It was originally developed by IBM and is now part of the <a href="https://nodered.org/">OpenJS Foundation</a>. It can also be used standalone, e.g. without Home Assistant. But when used as a Home Assistant addon you automatically gain access to all devices, services etc. that are known to Home Assistant. This makes it really easy to wire together useful automations.</p>
+                <p>I use a <a href="/software/home-assistant/">Home Assistant</a> addon called "Node-RED" for most of my automations. Node-RED is a low-code programming tool for wiring together hardware devices, APIs and online services. It was originally developed by IBM and is now part of the <a href="https://nodered.org/">OpenJS Foundation</a>. It can also be used standalone, e.g. without Home Assistant. But when used as a Home Assistant addon you automatically gain access to all devices, services etc. that are known to Home Assistant. This makes it really easy to wire together useful automations.</p>
 <h2 id="node-red-configuration">Node-RED configuration<a class="headerlink" href="#node-red-configuration" title="Permanent link">&para;</a></h2>
 <p>Node-RED is configured in it's UI. The resulting configuration is stored in a <a href="https://github.com/aerobless/home-assistant-configuration/tree/master/node-red">"node-red" folder</a>. Although it can be checked in it's not really meant to be human-readable or editable outside of Node-RED.</p>
 <p><img alt="Node-RED overview" src="node-red-overview.png" /></p>
@@ -632,7 +619,15 @@
 <li>Fast re-deployment: Re-deploying all automations is just a button click away and takes between 2-3seconds.</li>
 <li>All automations and their components are visible at once and can easily be interconnected and copy&amp;pasted for re-use.</li>
 </ul>
-<p>The downside of using Node-RED is that the resulting configuration is not really human-readable and sharing automations is not exactly easy.</p>
+<p>The downside of using Node-RED is that the resulting configuration is not really human-readable<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and the OCD part of me wants to have cleanly formatted files on GitHub ;-).</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>This is not really true. Node-REDs files can be pretty-printed and they're theoretically human-readable XML files. However these are so verbose that there's really no point.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               

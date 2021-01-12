@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#infrared" class="md-skip">
+        <a href="#zigbee" class="md-skip">
           Skip to content
         </a>
       
@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../software/overview/" class="md-tabs__link">
+      <a href="../../software/home-assistant/" class="md-tabs__link">
         Software
       </a>
     </li>
@@ -418,26 +418,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#infrared" class="md-nav__link">
-    Infrared
-  </a>
-  
-    <nav class="md-nav" aria-label="Infrared">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#logitech-harmony-hub" class="md-nav__link">
-    Logitech Harmony Hub
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#zigbee" class="md-nav__link">
     ZigBee
   </a>
@@ -448,6 +428,26 @@
           <li class="md-nav__item">
   <a href="#dresden-elektronik-conbee-stick" class="md-nav__link">
     Dresden Elektronik ConBee Stick
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrared" class="md-nav__link">
+    Infrared
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrared">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logitech-harmony-hub" class="md-nav__link">
+    Logitech Harmony Hub
   </a>
   
 </li>
@@ -592,19 +592,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/overview/" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
     <a href="../../software/home-assistant/" class="md-nav__link">
       Home Assistant
     </a>
@@ -674,19 +661,20 @@
                 
                   <h1>Networking & Mesh</h1>
                 
-                <h3 id="infrared">Infrared<a class="headerlink" href="#infrared" title="Permanent link">&para;</a></h3>
-<h4 id="logitech-harmony-hub">Logitech Harmony Hub<a class="headerlink" href="#logitech-harmony-hub" title="Permanent link">&para;</a></h4>
+                <h2 id="zigbee">ZigBee<a class="headerlink" href="#zigbee" title="Permanent link">&para;</a></h2>
+<h3 id="dresden-elektronik-conbee-stick">Dresden Elektronik ConBee Stick<a class="headerlink" href="#dresden-elektronik-conbee-stick" title="Permanent link">&para;</a></h3>
+<p>I use a Dresden Elektronik ConBee stick as ZigBee gateway for all of my ZigBee devices. The ConBee is a USB stick that's plugged directly into the Intel NUC running Home Assistant. In Home Assistant I'm using the <a href="/software/home-assistant/#addons">deCONZ addon</a> for adding and configuring ZigBee devices. The main advantage of using a ConBee instead of e.g. the Philips Hue hub is that you can unite devices of different vendors in a single Zigbee mesh. This is important because it grows a single large network instead of multiple small ones. Especially small sensors that are powered by button cells profit enormously from having access to close-by mains powered device such as a hue light.</p>
+<p>The ConBee stick works entirely locally and does not need a cloud service of it's vendor. This makes it more robust against outages and you don't have to worry as much about an additional attack vector or privacy. This is really a good product that I can recommend without hesitation. You can find more details on it's <a href="https://phoscon.de/en/conbee2/">manufacturer website</a>.</p>
+<p><img alt="ConBee" src="../images/conbee.jpg" style="height:50px" /></p>
+<h2 id="infrared">Infrared<a class="headerlink" href="#infrared" title="Permanent link">&para;</a></h2>
+<h3 id="logitech-harmony-hub">Logitech Harmony Hub<a class="headerlink" href="#logitech-harmony-hub" title="Permanent link">&para;</a></h3>
 <p>Logitech Harmony Hub is a infrared broadcast device that is accessed over wifi. It can be directly integrated into Home Assistant. From Home Assistant infrared codes can be sent to control various devices. In my setup I use it to control the TV, speakers and in summer the AC machine.</p>
 <p><img alt="Logitech Harmony Hub" src="../images/logitech_harmony_hub.jpg" style="height:50px" /></p>
-<h3 id="zigbee">ZigBee<a class="headerlink" href="#zigbee" title="Permanent link">&para;</a></h3>
-<h4 id="dresden-elektronik-conbee-stick">Dresden Elektronik ConBee Stick<a class="headerlink" href="#dresden-elektronik-conbee-stick" title="Permanent link">&para;</a></h4>
-<p>I use a Dresden Elektronik ConBee stick as ZigBee gateway for all of my ZigBee devices. The ConBee is a USB stick that's plugged directly into the Intel Nuc running Home Assistant. In Home Assistant I'm using the deCONZ addon for adding and configuring ZigBee devices.</p>
-<p><img alt="ConBee" src="../images/conbee.jpg" style="height:50px" /></p>
-<h3 id="wifi-ethernet">WiFi &amp; Ethernet<a class="headerlink" href="#wifi-ethernet" title="Permanent link">&para;</a></h3>
-<h4 id="fritzbox-5490">FRITZ!Box 5490<a class="headerlink" href="#fritzbox-5490" title="Permanent link">&para;</a></h4>
+<h2 id="wifi-ethernet">WiFi &amp; Ethernet<a class="headerlink" href="#wifi-ethernet" title="Permanent link">&para;</a></h2>
+<h3 id="fritzbox-5490">FRITZ!Box 5490<a class="headerlink" href="#fritzbox-5490" title="Permanent link">&para;</a></h3>
 <p>I'm using the Fritz!Box 5490 as router and DHCP server. This is the fiber version. It works well and it's easy to configure &amp; manage static IPs which is something you have to do often in a well organized Smart Home setup. I'm not using the wifi-router functionality because it's not located ideally for spreading the wifi signal. I'm also not using any of Fritz!'s smart home features.</p>
 <p><img alt="FRITZ!Box 5490" src="../images/fritzbox5490.jpg" style="height:150px" /></p>
-<h4 id="google-nest-wifi">Google Nest Wifi<a class="headerlink" href="#google-nest-wifi" title="Permanent link">&para;</a></h4>
+<h3 id="google-nest-wifi">Google Nest Wifi<a class="headerlink" href="#google-nest-wifi" title="Permanent link">&para;</a></h3>
 <p>I use a single Google Nest Wifi as my access point. It provides fast wireless access at gigabit speeds and has various optimizations for multi-device access as well as future compatibility to BLE and Thread for smart home device integrations. Additionally it looks nice and can be placed openly which improves the spread of the wifi signal as well. I run my Nest Wifi in bridge mode, which means it's DHCP server functionality is disabled and it simply extends my LAN over wifi.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
