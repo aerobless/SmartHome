@@ -1,6 +1,8 @@
-site_name: Smart Home
+site_name: SixtyMeters - Smart Home
 site_author: Theo Winter
 site_url: https://sixtymeters.com
+site_description: >-
+  Building a Smart Home with Home Assistant and Node RED. Documentation & Tutorials of all things Smart Home.
 
 repo_name: aerobless/SmartHome
 repo_url: https://github.com/aerobless/SmartHome
@@ -8,7 +10,19 @@ repo_url: https://github.com/aerobless/SmartHome
 
 nav:
   - Home: index.md
-  - Hardware: hardware/index.md
+  - Hardware:
+    - Overview: hardware/index.md
+    - Computers: hardware/computers.md
+    - Sensors: hardware/sensors.md
+    - Power Switches: hardware/power-switches.md
+    - Voice Assistants: hardware/voice-assistants.md
+    - Lights: hardware/lights.md
+    - Networking & Mesh: hardware/networking.md
+    - TV & Entertainment: hardware/entertainment.md
+    - Locks: hardware/locks.md
+    - Blinds: hardware/blinds.md
+    - NFC: hardware/nfc.md
+    - Miscellaneous: hardware/miscellaneous.md
   - Software:
     - Overview: software/overview.md
     - Home Assistant: software/home-assistant.md
@@ -20,6 +34,9 @@ theme:
   name: material
   language: en
   logo: './logo.svg'
+  features:
+    - navigation.tabs
+    - toc.integrate
 
 extra:
   disqus: aerobless-smart-home
@@ -40,3 +57,7 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.details

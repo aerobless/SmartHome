@@ -8,6 +8,198 @@ At 10am a check is executed whether the apartment is occupied or not. If it's no
 
 ![Roomba Cleaning Node-RED](roomba-cleaning-automation.png)
 
+??? "Node RED Flow"
+
+    ```python
+    [
+        {
+            "id": "27f43369.1137ec",
+            "type": "subflow",
+            "name": "apartment occupied?",
+            "info": "",
+            "category": "",
+            "in": [
+                {
+                    "x": 181.5,
+                    "y": 69,
+                    "wires": [
+                        {
+                            "id": "cbbdb47d.a4ed48"
+                        }
+                    ]
+                }
+            ],
+            "out": [
+                {
+                    "x": 700,
+                    "y": 40,
+                    "wires": [
+                        {
+                            "id": "1792a55d.ddc24b",
+                            "port": 0
+                        }
+                    ]
+                },
+                {
+                    "x": 700,
+                    "y": 90,
+                    "wires": [
+                        {
+                            "id": "1792a55d.ddc24b",
+                            "port": 1
+                        }
+                    ]
+                }
+            ],
+            "outputLabels": [
+                "clear",
+                "occupied"
+            ]
+        },
+        {
+            "id": "cbbdb47d.a4ed48",
+            "type": "api-current-state",
+            "z": "27f43369.1137ec",
+            "name": "apartment occupancy",
+            "server": "78fe396.483dac8",
+            "outputs": 1,
+            "halt_if": "",
+            "halt_if_type": "str",
+            "halt_if_compare": "is",
+            "override_topic": true,
+            "entity_id": "binary_sensor.apartment_occupancy",
+            "state_type": "habool",
+            "override_payload": true,
+            "override_data": true,
+            "x": 361.5,
+            "y": 69,
+            "wires": [
+                [
+                    "1792a55d.ddc24b"
+                ]
+            ]
+        },
+        {
+            "id": "1792a55d.ddc24b",
+            "type": "switch",
+            "z": "27f43369.1137ec",
+            "name": "is occupied?",
+            "property": "payload",
+            "propertyType": "msg",
+            "rules": [
+                {
+                    "t": "false"
+                },
+                {
+                    "t": "true"
+                }
+            ],
+            "checkall": "true",
+            "repair": false,
+            "outputs": 2,
+            "x": 554.5,
+            "y": 69,
+            "wires": [
+                [],
+                []
+            ]
+        },
+        {
+            "id": "74556465.5e1fac",
+            "type": "api-call-service",
+            "z": "d3ff7562.eebf38",
+            "name": "Roomba ON",
+            "server": "78fe396.483dac8",
+            "version": 1,
+            "debugenabled": false,
+            "service_domain": "vacuum",
+            "service": "start",
+            "entityId": "vacuum.ghost",
+            "data": "",
+            "dataType": "json",
+            "mergecontext": "",
+            "output_location": "payload",
+            "output_location_type": "msg",
+            "mustacheAltTags": false,
+            "x": 570,
+            "y": 40,
+            "wires": [
+                []
+            ]
+        },
+        {
+            "id": "d5a40336.045ed",
+            "type": "inject",
+            "z": "d3ff7562.eebf38",
+            "name": "10am weekdays",
+            "repeat": "",
+            "crontab": "00 10 * * 1,2,3,4,5",
+            "once": false,
+            "onceDelay": 0.1,
+            "topic": "",
+            "payload": "true",
+            "payloadType": "bool",
+            "x": 144.5,
+            "y": 60,
+            "wires": [
+                [
+                    "b816139a.b3f9e"
+                ]
+            ]
+        },
+        {
+            "id": "b816139a.b3f9e",
+            "type": "subflow:27f43369.1137ec",
+            "z": "d3ff7562.eebf38",
+            "name": "",
+            "x": 360,
+            "y": 60,
+            "wires": [
+                [
+                    "74556465.5e1fac"
+                ],
+                [
+                    "b94a88b0.eff1c8"
+                ]
+            ]
+        },
+        {
+            "id": "b94a88b0.eff1c8",
+            "type": "api-call-service",
+            "z": "d3ff7562.eebf38",
+            "name": "Telegram Log",
+            "server": "78fe396.483dac8",
+            "version": "1",
+            "debugenabled": false,
+            "service_domain": "telegram_bot",
+            "service": "send_message",
+            "entityId": "",
+            "data": "{\"message\":\"Not launching Roomba because someone's home\"}",
+            "dataType": "json",
+            "mergecontext": "",
+            "output_location": "payload",
+            "output_location_type": "msg",
+            "mustacheAltTags": false,
+            "x": 570,
+            "y": 80,
+            "wires": [
+                []
+            ]
+        },
+        {
+            "id": "78fe396.483dac8",
+            "type": "server",
+            "name": "Home Assistant",
+            "legacy": false,
+            "addon": true,
+            "rejectUnauthorizedCerts": true,
+            "ha_boolean": "y|yes|true|on|home|open",
+            "connectionDelay": true,
+            "cacheJson": true
+        }
+    ]
+    ```
+
 ## Lights
 
 ### Kitchen Overhead Light

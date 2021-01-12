@@ -1,3 +1,5 @@
+# Software
+
 This is a bit of a general overview over all the software I use. It's not strictly limited to only Smart Home stuff since
 it's hard to draw a clear line.
 
