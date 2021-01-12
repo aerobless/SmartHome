@@ -33,6 +33,7 @@ theme:
   name: material
   language: en
   logo: './logo.svg'
+  custom_dir: overrides
   features:
     - navigation.tabs
     - toc.integrate
