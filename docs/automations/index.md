@@ -1,5 +1,4 @@
-
-All of these automations are built in [Node-RED](/SmartHome/software/node-red/). And they're automating devices configured in Home Assistant.
+Most of my automations are built in [Node-RED](/software/node-red/). Even though Home Assistant native automations have come a long way there's still a few advantages that you only get with Node-RED. You can read more about it [here](/software/node-red/#why-use-node-red-over-the-home-assistant-built-in-automation-features).
 
 ## Universal
 
@@ -262,7 +261,7 @@ I've set up a charging station for various camera batteries, drone, battery pack
 ## TV & Entertainment
 
 ### iOS TV Remote
-iOS has a virtual TV remote in the control center. This remote can be used to control Apple TVs but also Homekit-compatible TVs of other manufacturers. Since my TV doesn't support Homekit natively I wanted to recreate this feature using a [Logitech IR](/SmartHome/hardware/#logitech-harmony-hub) blaster that sends the remote control commands to the TV.
+iOS has a virtual TV remote in the control center. This remote can be used to control Apple TVs but also Homekit-compatible TVs of other manufacturers. Since my TV doesn't support Homekit natively I wanted to recreate this feature using a [Logitech IR](/hardware/networking/#logitech-harmony-hub) blaster that sends the remote control commands to the TV.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Samsung TV playing nice with the native iOS remote utility 😄 - of course using <a href="https://twitter.com/home_assistant?ref_src=twsrc%5Etfw">@home_assistant</a> for the integration. The commands are sent over IR so really any TV could be added like this <a href="https://t.co/tehkkdGzei">pic.twitter.com/tehkkdGzei</a></p>&mdash; Theo Winter (@eletiy) <a href="https://twitter.com/eletiy/status/1281320444931514382?ref_src=twsrc%5Etfw">July 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

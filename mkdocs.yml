@@ -24,7 +24,6 @@ nav:
     - NFC: hardware/nfc.md
     - Miscellaneous: hardware/miscellaneous.md
   - Software:
-    - Overview: software/overview.md
     - Home Assistant: software/home-assistant.md
     - KNX: software/knx/index.md
     - Node-RED: software/node-red/index.md
@@ -53,6 +52,7 @@ google_analytics:
 markdown_extensions:
   - admonition
   - attr_list
+  - footnotes
   - codehilite:
       guess_lang: false
   - toc:
