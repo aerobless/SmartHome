@@ -27,7 +27,10 @@ nav:
     - Home Assistant: software/home-assistant.md
     - KNX: software/knx/index.md
     - Node-RED: software/node-red/index.md
-  - Automations: automations/index.md
+  - Automations:
+    - Overview: automations/index.md
+    - Node-RED Utilities: automations/node-red-utilities.md
+    - Automation Examples: automations/examples.md
 
 theme:
   name: material
