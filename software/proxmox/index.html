@@ -742,7 +742,7 @@
 <li>Boot the VM, lookup it's MAC address and assign the desired static IP for Home Assistant in your router, then reboot the VM.</li>
 <li>If you have usb devices that should be exposed to Home Assistant, e.g. a deCONZ ZigBee stick, add them (Hardware &gt; Add USB Device)</li>
 <li>Access Home Assistant and upload your snapshot to restore your configuration, data &amp; addons</li>
-<li>If you have network issues, e.g. accessing Nabu Casa Cloud doesn't work, this is likely due to a misconfigured IPv6 stack. <a href="https://www.nabucasa.com/config/troubleshooting/">Nabu Casa recommends just turning off IPv6</a>, which can be done by logging into Home Assistant via the shell and running <code>nmcli con modify "HassOS deafult" ipv6.method disabled</code>, then reboot.</li>
+<li>If you have network issues, e.g. accessing Nabu Casa Cloud doesn't work, this is likely due to a misconfigured IPv6 stack. <a href="https://www.nabucasa.com/config/troubleshooting/">Nabu Casa recommends just turning off IPv6</a>, which can be done by logging into Home Assistant via the shell and running <code>nmcli con modify "HassOS default" ipv6.method disabled</code>, then reboot.</li>
 </ol>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <details><summary>The VM doesn't boot Home Assistant</summary><p>See step 13. You likely need to set the correct boot order. So that the VM boots from the created disk.</p>
