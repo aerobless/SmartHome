@@ -319,6 +319,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#blog" class="md-nav__link">
+    Blog
+  </a>
+  
+    <nav class="md-nav" aria-label="Blog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21012021-migrated-my-home-assistant-installation-to-proxmox" class="md-nav__link">
+    21.01.2021 Migrated my Home Assistant installation to Proxmox
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -574,6 +594,19 @@
   </li>
 
         
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="software/proxmox/" class="md-nav__link">
+      Proxmox
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -674,6 +707,11 @@
 <li><a href="hardware/">Hardware</a></li>
 <li><a href="automations/">Automations</a></li>
 </ul>
+<h2 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h2>
+<h3 id="21012021-migrated-my-home-assistant-installation-to-proxmox">21.01.2021 <strong>Migrated my Home Assistant installation to Proxmox</strong><a class="headerlink" href="#21012021-migrated-my-home-assistant-installation-to-proxmox" title="Permanent link">&para;</a></h3>
+<p>Until recently I've had Home Assistant installed in supervised mode. That's the one where I have full control over the OS but still use the HA Supervisor and docker containers.
+It used to be easy to install and I didn't really have any issues. However since the HA Supervisor started to include various health checks it's been a bit annoying to keep it "healthy".
+So I've decided to go the virtualization route and install Proxmox. This allows me to run the official Home Assistant OS image as a VM and still run other VMs with different applications on the same machine. <a href="/software/proxmox">I've added a chapter about Proxmox under Software where you can find more information.</a></p>
                 
               
               
