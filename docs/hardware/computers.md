@@ -1,6 +1,6 @@
 ### Intel NUC Baby Canyon NUC7i3BNH
-The brains of my whole Smart Home setup. It's sporting a Intel i3-7100U CPU clocking 2.4 GHz, 2x 8GB DDR-4 Ram and an Intel 545 256GB SSD.
-As for software it's running Ubuntu 18.04 LTS, Docker and most importantly Home Assistant. I'm currently running Home Assistant as a supervised installation (HA Core + Supervisor).
+The brains of my whole Smart Home setup. It's sporting a Intel i3-7100U dual core CPU clocking 2.4 GHz, 2x 8GB DDR-4 Ram and a WD Blue 1TB M.2 SSD.
+As for software it's running [Proxmox](/software/proxmox/), a virtualization platform. Inside of Proxmox I've deployed Home Assistant OS as a virtual appliance.
 
 ![Intel NUC](images/intel-nuc.jpg){: style="height:150px"}
 

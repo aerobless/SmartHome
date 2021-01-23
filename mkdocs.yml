@@ -27,6 +27,7 @@ nav:
     - Home Assistant: software/home-assistant.md
     - KNX: software/knx/index.md
     - Node-RED: software/node-red/index.md
+    - Proxmox: software/proxmox/index.md
   - Automations:
     - Overview: automations/index.md
     - Node-RED Utilities: automations/node-red-utilities.md
@@ -65,3 +66,7 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.superfences
   - pymdownx.details
+  - pymdownx.smartsymbols
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde

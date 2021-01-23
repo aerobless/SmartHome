@@ -1,7 +1,7 @@
 # KNX Blinds Configuration
 
 The apartment that I'm renting has blinds that can be raised and lowered electronically. They're controlled over a "Griesser MGX-9 Motorsteuerung" (actor controller).
-The controlled communicates with the building's central control unit over [KNX](https://en.wikipedia.org/wiki/KNX_(standard)). KNX is an open standard for building automation.
+The controller communicates with the buildings central control unit over [KNX](https://en.wikipedia.org/wiki/KNX_(standard)). KNX is an open standard for building automation.
 
 **Some of the rules that cause the building to control the blinds are:**
 
