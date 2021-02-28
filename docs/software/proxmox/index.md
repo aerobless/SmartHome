@@ -38,7 +38,7 @@ I'm not going to write down all the steps from the tutorial in detail, just a ro
 12. Boot the VM, lookup it's MAC address and assign the desired static IP for Home Assistant in your router, then reboot the VM.
 13. If you have usb devices that should be exposed to Home Assistant, e.g. a deCONZ ZigBee stick, add them (Hardware > Add USB Device)
 14. Access Home Assistant and upload your snapshot to restore your configuration, data & addons
-15. If you have network issues, e.g. accessing Nabu Casa Cloud doesn't work, this is likely due to a misconfigured IPv6 stack. [Nabu Casa recommends just turning off IPv6](https://www.nabucasa.com/config/troubleshooting/), which can be done by logging into Home Assistant via the shell and running `nmcli con modify "HassOS deafult" ipv6.method disabled`, then reboot.
+15. If you have network issues, e.g. accessing Nabu Casa Cloud doesn't work, this is likely due to a misconfigured IPv6 stack. [Nabu Casa recommends just turning off IPv6](https://www.nabucasa.com/config/troubleshooting/), which can be done by logging into Home Assistant via the shell and running `nmcli con modify "HassOS default" ipv6.method disabled`, then reboot.
 
 ## Troubleshooting
 

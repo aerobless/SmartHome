@@ -30,6 +30,7 @@ nav:
     - Proxmox: software/proxmox/index.md
   - Automations:
     - Overview: automations/index.md
+    - Getting started: automations/getting-started-with-node-red.md
     - Node-RED Utilities: automations/node-red-utilities.md
     - Automation Examples: automations/examples.md
 

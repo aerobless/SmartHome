@@ -8,13 +8,15 @@ Passwords, auth tokens and other secrets are stored in a secrets.yaml file that 
 ## Screens
 
 ### Overview
-This screen I use 90% of the time. Most devices are controllable from the mini map "Apartment Status". Lights and basic devices will just turn on/off when clicked, other devices such as the blinds open a modal window to change detailed settings.
+This screen I use 90% of the time. Most devices are controllable from the mini map "Apartment Status". Lights and basic devices will just turn on/off when clicked, other devices such as the blinds open a modal window to change detailed settings. I've also started setting up quick action buttons (below the minimap) to trigger my most used light scenes, music or the vacuum robot.
 
 ![Overview Screen](screens/overview-screen.png)
 
 ### Media Remote Control
-The remote control screen is meant to be used from the phone if I can't find the actual physical remote control ;-). It uses a logitech harmony IR blaster since most tv settings can't be reliably changed over their web apis. Back when I bought this TV it wasn't yet a requirement that it had to have a good api for automation :P.
+The remote control screen is used to control the TV and multi-room audio setup. The TV is controlled over a [Logitech Harmony](/hardware/networking/#logitech-harmony-hub) IR blaster and some undocumented REST APIs. The audio system is controlled via [Chromecast/Google Home](/hardware/voice-assistants/).
+
 ![Media Remote Screen](screens/media-remote-screen.png)
+![Media Remote Screen](screens/media-remote-mobile_iphone12black_portrait.png){style="height:700px"}
 
 ### Züri Webcams
 Some public webcams in various places around Zurich. I quite like this screen as it gives me a quick overview of what's happening in the city.
