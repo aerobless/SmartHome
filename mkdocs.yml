@@ -33,6 +33,7 @@ nav:
     - Getting started: automations/getting-started-with-node-red.md
     - Node-RED Utilities: automations/node-red-utilities.md
     - Automation Examples: automations/examples.md
+    - Exporting Apple Health data to Home Assistant: automations/exporting-apple-health-data-to-home-assistant.md
 
 theme:
   name: material
