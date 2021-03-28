@@ -1,2 +1,2 @@
 ### Home Assistant Tag Reader
-I'm using a [Home Assistant Tag reader](images/https://github.com/adonno/tagreader) to read various NFC tags. For example I have NFC cards for various light scenes that aren't used that frequently (e.g. party scene). I also plan on using this for Spotify playlists and other things that aren't so easily exposed in the physical world.
+I'm using a [Home Assistant Tag reader](https://github.com/adonno/tagreader) to read various NFC tags. For example I have NFC cards for various light scenes that aren't used that frequently (e.g. party scene). I also plan on using this for Spotify playlists and other things that aren't so easily exposed in the physical world.
