@@ -1,3 +1,9 @@
+---
+title: Exporting Apple Health Data to Home Assistant
+description: How to automatically export Apple Health data into InfluxDB with Home Assistant and Node RED.
+image: https://sixtymeters.com/automations/images/grafana-twittercard.png
+---
+
 I've recently started using the excellent Influx [addon](/software/home-assistant/#addons) to store data that I want to keep around for a long time. Influx is a time series database which means that it has been optimized to store data through associated pairs of time(s) and value(s). To make use of that data stored in InfluxDB I use a Grafana Dashboard. (Another excellent [addon](/software/home-assistant/#addons) for Home Assistant 😄)
 
 ![Grafana Dashboard](images/grafana_health_stats.png)
